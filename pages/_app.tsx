@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import RootLayout from '@/pages/layout';
@@ -10,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <UserProvider>
       <RootLayout>
         <Head>
-          <title>Chan'ce Solution</title>
+          <title>Chan&apos;ce Solution</title>
           <meta name='description' content='Web solution for your business' />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <link rel='icon' href='/favicon.ico' />

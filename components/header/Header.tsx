@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Nav from './Nav';
+import Button from '../common/Button';
 
-const Header: React.FC = () => {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -38,10 +39,10 @@ const Header: React.FC = () => {
   return (
     <header className='relative flex items-center justify-between p-4 bg-gray-800 text-white h-[80px]'>
       <Nav isOpen={isOpen} toggleMenu={toggleMenu} />
-      <div className='text-xl font-bold'>Logo</div>
-      <button className='ml-4 p-2 bg-blue-500 hover:bg-blue-700 rounded'>Action</button>
+      <div className='text-xl font-bold'>Chan&apos;ce Solution</div>
+      <Button className='ml-4 p-2 bg-blue-500 hover:bg-blue-700 rounded' onClick={() => {}}>
+        Action
+      </Button>
     </header>
   );
-};
-
-export default Header;
+}

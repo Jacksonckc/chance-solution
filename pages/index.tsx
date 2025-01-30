@@ -1,7 +1,9 @@
+import HomePageHero from '@/components/HomePageHero';
+
 export default function Home() {
   return (
-    <div>
-      <h1>Home Page</h1>
+    <div className='relative h-screen bg-grey-700'>
+      <HomePageHero />
     </div>
   );
 }
