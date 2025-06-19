@@ -37,6 +37,3 @@ next-env.d.ts
 
 # temp video files
 public/temp-videos/
-
-# python requirements
-requirements.txt
