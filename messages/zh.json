@@ -14,7 +14,21 @@
     "subtitle": "为小企业构建强大的网络应用",
     "description": "我们专注于创建现代化、响应式的网络解决方案，帮助企业在这个数字世界中成长和成功。",
     "cta": "开始使用",
-    "learnMore": "了解更多"
+    "learnMore": "了解更多",
+    "features": {
+      "videoDownloads": {
+        "title": "视频下载",
+        "description": "轻松下载 YouTube 视频。支持特定 URL 和热门视频。"
+      },
+      "fastReliable": {
+        "title": "快速可靠",
+        "description": "高质量下载，支持自定义时长和格式选项。"
+      },
+      "beautifulUI": {
+        "title": "美观界面",
+        "description": "现代化界面，支持多种主题和深色模式。"
+      }
+    }
   },
   "about": {
     "title": "关于 Chan'ce Solution",
@@ -193,6 +207,9 @@
     "loading": "加载中...",
     "error": "错误",
     "success": "成功",
-    "warning": "警告"
+    "warning": "警告",
+    "tryTools": "试用我们的工具",
+    "getInTouch": "联系我们",
+    "learnMore": "了解更多"
   }
 }

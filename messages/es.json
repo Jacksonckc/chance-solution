@@ -30,7 +30,22 @@
     "title": "Bienvenido a Chan'ce Solution",
     "subtitle": "Construyendo aplicaciones web poderosas para pequeñas empresas",
     "description": "Nos especializamos en crear soluciones web modernas y responsivas que ayudan a las empresas a crecer y tener éxito en el mundo digital.",
-    "cta": "Comenzar"
+    "cta": "Comenzar",
+    "learnMore": "Saber Más",
+    "features": {
+      "videoDownloads": {
+        "title": "Descargas de Video",
+        "description": "Descarga videos de YouTube con facilidad. Soporte para URLs específicas y videos populares."
+      },
+      "fastReliable": {
+        "title": "Rápido y Confiable",
+        "description": "Descargas de alta calidad con opciones de duración y formato personalizables."
+      },
+      "beautifulUI": {
+        "title": "UI Hermosa",
+        "description": "Interfaz moderna con múltiples temas y soporte para modo oscuro."
+      }
+    }
   },
   "about": {
     "title": "Acerca de Chan'ce Solution",

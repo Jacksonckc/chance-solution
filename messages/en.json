@@ -31,7 +31,21 @@
     "subtitle": "Building powerful web applications for small businesses",
     "description": "We specialize in creating modern, responsive web solutions that help businesses grow and succeed in the digital world.",
     "cta": "Get Started",
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "features": {
+      "videoDownloads": {
+        "title": "Video Downloads",
+        "description": "Download YouTube videos with ease. Support for specific URLs and trending videos."
+      },
+      "fastReliable": {
+        "title": "Fast & Reliable",
+        "description": "High-quality downloads with customizable duration and format options."
+      },
+      "beautifulUI": {
+        "title": "Beautiful UI",
+        "description": "Modern interface with multiple themes and dark mode support."
+      }
+    }
   },
   "about": {
     "title": "About Chan'ce Solution",

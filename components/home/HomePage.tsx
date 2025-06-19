@@ -9,10 +9,10 @@ export default function HomePage() {
   const router = useRouter();
 
   return (
-    <div className='h-full flex items-center justify-center'>
-      <div className='text-center max-w-4xl mx-auto px-6'>
+    <div className='flex items-center justify-center py-8 px-4'>
+      <div className='text-center max-w-4xl mx-auto'>
         <Text variant='display1' as='h1' className='mb-6 font-bold'>
-          {t('home.title')}
+          {t('home.title') as string}
         </Text>
 
         <Text
@@ -20,14 +20,14 @@ export default function HomePage() {
           as='p'
           className='mb-8 leading-relaxed'
           style={{ color: 'var(--color-text-light)' }}>
-          {t('home.subtitle')}
+          {t('home.subtitle') as string}
         </Text>
 
-        <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+        <div className='flex flex-col sm:flex-row gap-4 justify-center mb-12'>
           <Button
             className='btn-primary text-lg px-8 py-4'
-            onClick={() => (window.location.href = '/downloadVideo')}>
-            {t('common.tryTools')}
+            onClick={() => router.push('/downloadVideo')}>
+            {t('common.tryTools') as string}
           </Button>
 
           <Button onClick={() => router.push('/about')} className='btn-primary text-lg px-8 py-4'>
@@ -37,38 +37,38 @@ export default function HomePage() {
           <Button
             onClick={() => router.push('/contact')}
             className='btn-secondary text-lg px-8 py-4'>
-            {t('home.learnMore') as string}
+            {t('common.learnMore') as string}
           </Button>
         </div>
 
-        <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
           <div className='card p-6 text-center'>
             <div className='text-4xl mb-4'>🎥</div>
             <Text variant='h3' as='h3' className='mb-2'>
-              {t('home.features.videoDownloads.title')}
+              {t('home.features.videoDownloads.title') as string}
             </Text>
             <Text variant='body2' style={{ color: 'var(--color-text-light)' }}>
-              {t('home.features.videoDownloads.description')}
+              {t('home.features.videoDownloads.description') as string}
             </Text>
           </div>
 
           <div className='card p-6 text-center'>
             <div className='text-4xl mb-4'>⚡</div>
             <Text variant='h3' as='h3' className='mb-2'>
-              {t('home.features.fastReliable.title')}
+              {t('home.features.fastReliable.title') as string}
             </Text>
             <Text variant='body2' style={{ color: 'var(--color-text-light)' }}>
-              {t('home.features.fastReliable.description')}
+              {t('home.features.fastReliable.description') as string}
             </Text>
           </div>
 
           <div className='card p-6 text-center'>
             <div className='text-4xl mb-4'>🎨</div>
             <Text variant='h3' as='h3' className='mb-2'>
-              {t('home.features.beautifulUI.title')}
+              {t('home.features.beautifulUI.title') as string}
             </Text>
             <Text variant='body2' style={{ color: 'var(--color-text-light)' }}>
-              {t('home.features.beautifulUI.description')}
+              {t('home.features.beautifulUI.description') as string}
             </Text>
           </div>
         </div>
