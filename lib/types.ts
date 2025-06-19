@@ -7,3 +7,13 @@ export interface VideoDownloadInput {
   duration?: number;
   output?: string;
 }
+
+export interface VideoDownloadResponse {
+  success: boolean;
+  message: string;
+  output?: string;
+  error?: string;
+  filePath: string;
+  downloadUrl: string;
+  fileName: string;
+}

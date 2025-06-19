@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import classNames from 'classnames';
 import MenuBtn from './MenuBtn';
+import NavMenuItem from './NavMenuItem';
 import { useRouter } from 'next/router';
 import ThemeToggle from '../molecules/ThemeToggle';
 import Text from '../atoms/Text';
@@ -25,6 +26,14 @@ export default function Nav({ isOpen, toggleMenu }: NavProps) {
     }
     toggleMenu();
   };
+
+  const menuItems = [
+    { label: 'Home', path: undefined },
+    { label: 'About', path: undefined },
+    { label: 'Jobs', path: undefined },
+    { label: 'Contact', path: undefined },
+    { label: 'Download Video', path: 'downloadVideo' }
+  ];
 
   return (
     <div>
@@ -60,51 +69,14 @@ export default function Nav({ isOpen, toggleMenu }: NavProps) {
         <ul
           className='flex flex-col relative mt-[80px] mx-[20px] space-y-4 text-3xl'
           style={{ borderTop: '2px solid var(--color-border)' }}>
-          <li className='p-2 transition-colors duration-200'>
-            <button
+          {menuItems.map((item, index) => (
+            <NavMenuItem
+              key={index}
+              label={item.label}
+              path={item.path}
               onClick={handleMenuItemClick}
-              className='hover:opacity-70 transition-opacity w-full text-left'>
-              <Text variant='h3' as='span'>
-                Home
-              </Text>
-            </button>
-          </li>
-          <li className='p-2 transition-colors duration-200'>
-            <button
-              onClick={handleMenuItemClick}
-              className='hover:opacity-70 transition-opacity w-full text-left'>
-              <Text variant='h3' as='span'>
-                About
-              </Text>
-            </button>
-          </li>
-          <li className='p-2 transition-colors duration-200'>
-            <button
-              onClick={handleMenuItemClick}
-              className='hover:opacity-70 transition-opacity w-full text-left'>
-              <Text variant='h3' as='span'>
-                Jobs
-              </Text>
-            </button>
-          </li>
-          <li className='p-2 transition-colors duration-200'>
-            <button
-              onClick={handleMenuItemClick}
-              className='hover:opacity-70 transition-opacity w-full text-left'>
-              <Text variant='h3' as='span'>
-                Contact
-              </Text>
-            </button>
-          </li>
-          <li className='p-2 transition-colors duration-200'>
-            <button
-              onClick={(e) => handleMenuItemClick(e, 'downloadVideo')}
-              className='hover:opacity-70 transition-opacity w-full text-left'>
-              <Text variant='h3' as='span'>
-                Download Video
-              </Text>
-            </button>
-          </li>
+            />
+          ))}
 
           {/* Theme Toggle for Mobile */}
           <li className='p-2 transition-colors duration-200 border-t border-gray-200 pt-4 mt-4'>

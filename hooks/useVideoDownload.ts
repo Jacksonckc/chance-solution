@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { VideoDownloadInput, VideoDownloadResponse } from '../lib/graphql/schema';
+import { VideoDownloadInput, VideoDownloadResponse } from '@/lib/types';
 
 interface UseVideoDownloadState {
   isLoading: boolean;

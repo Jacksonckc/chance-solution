@@ -1,20 +1,22 @@
 import React from 'react';
 
 interface ButtonProps {
-  onClick: () => void;
+  onClick?: () => void;
   children: string;
   disabled?: boolean;
   className?: string;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 export default function Button({
   onClick,
   children,
   disabled = false,
-  className = ''
+  className = '',
+  type = 'button'
 }: ButtonProps) {
   return (
-    <button onClick={onClick} disabled={disabled} className={`${className}`}>
+    <button type={type} onClick={onClick} disabled={disabled} className={`${className}`}>
       {children}
     </button>
   );
