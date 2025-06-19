@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Nav from './Nav';
 import Text from '../atoms/Text';
+import LanguageSwitcher from '../molecules/LanguageSwitcher';
 import { useRouter } from 'next/router';
 
 export default function Header() {
@@ -54,6 +55,11 @@ export default function Header() {
         <Text variant='h1' as='h1' className='font-bold'>
           Chan&apos;ce Solution
         </Text>
+      </div>
+
+      {/* Desktop Language Switcher */}
+      <div className='hidden md:flex items-center'>
+        <LanguageSwitcher />
       </div>
     </header>
   );

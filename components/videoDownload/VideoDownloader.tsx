@@ -4,6 +4,7 @@ import VideoPreview from './VideoPreview';
 import Text from '../atoms/Text';
 import { useVideoDownload } from '../../hooks/useVideoDownload';
 import { VideoDownloadInput, VideoDownloaderProps } from '@/lib/types';
+import { useTranslations } from '@/hooks/useTranslations';
 
 export default function VideoDownloader({ className = '' }: VideoDownloaderProps) {
   const [url, setUrl] = useState('');
@@ -11,6 +12,7 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
   const [validationError, setValidationError] = useState<string | null>(null);
   const [isCleaning, setIsCleaning] = useState(false);
   const [cleanupMessage, setCleanupMessage] = useState<string | null>(null);
+  const t = useTranslations();
 
   const {
     isLoading,
@@ -27,19 +29,17 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
     setValidationError(null);
 
     if (!isTrendingDownload && !url.trim()) {
-      setValidationError('Please enter a YouTube URL to download a specific video.');
+      setValidationError(t('videoDownload.validation.noUrl') as string);
       return false;
     }
 
     if (url.trim() && !isValidYouTubeUrl(url.trim())) {
-      setValidationError(
-        'Please enter a valid YouTube URL (e.g., https://www.youtube.com/watch?v=...)'
-      );
+      setValidationError(t('videoDownload.validation.invalidUrl') as string);
       return false;
     }
 
     if (duration !== '' && (isNaN(Number(duration)) || Number(duration) <= 0)) {
-      setValidationError('Duration must be a positive number.');
+      setValidationError(t('videoDownload.validation.invalidDuration') as string);
       return false;
     }
 
@@ -174,7 +174,7 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
       {/* Main Content */}
       <div className='card p-6 animate-fade-in'>
         <Text variant='h1' as='h2' className='mb-6 text-center'>
-          YouTube Video Downloader
+          {t('videoDownload.title')}
         </Text>
 
         <div className='space-y-6'>
@@ -184,17 +184,14 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
               htmlFor='url'
               className='block mb-2 font-medium'
               style={{ color: 'var(--color-text)' }}>
-              <Text variant='body2'>
-                YouTube URL (Required for &quot;Download Video&quot;, optional for &quot;Download
-                Trending&quot;)
-              </Text>
+              <Text variant='body2'>{t('videoDownload.urlLabel')}</Text>
             </label>
             <input
               type='url'
               id='url'
               value={url}
               onChange={handleUrlChange}
-              placeholder='https://www.youtube.com/watch?v=...'
+              placeholder={t('videoDownload.urlPlaceholder') as string}
               className='input-field'
             />
           </div>
@@ -205,7 +202,7 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
               htmlFor='duration'
               className='block mb-2 font-medium'
               style={{ color: 'var(--color-text)' }}>
-              <Text variant='body2'>Duration (seconds) - Leave empty for entire video</Text>
+              <Text variant='body2'>{t('videoDownload.durationLabel')}</Text>
             </label>
             <input
               type='number'
@@ -214,15 +211,15 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
               onChange={handleDurationChange}
               min='1'
               max='3600'
-              placeholder='300'
+              placeholder={t('videoDownload.durationPlaceholder') as string}
               className='input-field'
             />
             <Text variant='body3' className='mt-1' style={{ color: 'var(--color-text-light)' }}>
               {duration === ''
-                ? 'Will download the entire video'
-                : `Will download first ${duration} seconds (${Math.floor(
-                    Number(duration) / 60
-                  )} minutes)`}
+                ? t('videoDownload.entireVideo')
+                : (t('videoDownload.partialVideo') as string)
+                    .replace('{duration}', duration.toString())
+                    .replace('{minutes}', Math.floor(Number(duration) / 60).toString())}
             </Text>
           </div>
 
@@ -232,14 +229,18 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
               onClick={handleDownload}
               disabled={isLoading}
               className='flex-1 btn-primary disabled:opacity-50 disabled:cursor-not-allowed'>
-              {isLoading ? 'Downloading...' : 'Download Video'}
+              {isLoading
+                ? (t('videoDownload.downloading') as string)
+                : (t('videoDownload.downloadVideo') as string)}
             </Button>
 
             <Button
               onClick={handleTrendingDownload}
               disabled={isLoading}
               className='flex-1 btn-secondary disabled:opacity-50 disabled:cursor-not-allowed'>
-              {isLoading ? 'Downloading...' : 'Download Trending'}
+              {isLoading
+                ? (t('videoDownload.downloading') as string)
+                : (t('videoDownload.downloadTrending') as string)}
             </Button>
           </div>
 
@@ -309,21 +310,23 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
             <div className='card p-4'>
               <div className='flex justify-between items-center mb-3'>
                 <Text variant='h4' as='h3' className='font-medium'>
-                  Download History
+                  {t('videoDownload.history.title')}
                 </Text>
                 <div className='flex gap-2'>
                   <button
                     onClick={clearHistory}
                     className='text-sm hover:opacity-70 transition-opacity'
                     style={{ color: 'var(--color-text-light)' }}>
-                    Clear History
+                    {t('videoDownload.history.clearHistory')}
                   </button>
                   <span style={{ color: 'var(--color-border)' }}>|</span>
                   <button
                     onClick={handleCleanup}
                     disabled={isCleaning}
                     className='text-sm text-red-600 hover:text-red-800 disabled:text-gray-400 transition-colors'>
-                    {isCleaning ? 'Cleaning...' : 'Cleanup Files'}
+                    {isCleaning
+                      ? t('videoDownload.history.cleaning')
+                      : t('videoDownload.history.cleanupFiles')}
                   </button>
                 </div>
               </div>
@@ -357,24 +360,21 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
           {/* Instructions */}
           <div className='card p-4'>
             <Text variant='h4' as='h3' className='mb-2'>
-              How it works:
+              {t('videoDownload.instructions.title')}
             </Text>
             <ul className='text-sm space-y-1' style={{ color: 'var(--color-text-light)' }}>
               <li>
-                • <strong>Download Video:</strong> Requires a YouTube URL to download a specific
-                video
+                • <strong>{t('videoDownload.instructions.downloadVideo')}</strong>
               </li>
               <li>
-                • <strong>Download Trending:</strong> Downloads the most viewed trending video of
-                the day (no URL needed)
+                • <strong>{t('videoDownload.instructions.downloadTrending')}</strong>
               </li>
               <li>
-                • <strong>Duration:</strong> Leave empty to download entire video, or specify
-                seconds for a segment
+                • <strong>{t('videoDownload.instructions.duration')}</strong>
               </li>
-              <li>• Videos are saved in MP4 format with best quality up to 1080p</li>
-              <li>• Click the download button to save the video to your device</li>
-              <li>• Use &quot;Cleanup Files&quot; to remove old video files from the server</li>
+              <li>• {t('videoDownload.instructions.format')}</li>
+              <li>• {t('videoDownload.instructions.download')}</li>
+              <li>• {t('videoDownload.instructions.cleanup')}</li>
             </ul>
           </div>
         </div>

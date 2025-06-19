@@ -118,7 +118,7 @@ div {
 /* Custom Component Classes */
 @layer components {
   .card {
-    @apply bg-white rounded-lg shadow-sm border border-gray-200 transition-all duration-200;
+    @apply bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 animate-fade-in;
     background-color: var(--color-surface);
     border-color: var(--color-border);
     color: var(--color-text);

@@ -1,5 +1,6 @@
 import React from 'react';
 import ContactMethodCard from './ContactMethodCard';
+import { useTranslations } from '@/hooks/useTranslations';
 
 interface ContactMethodsSectionProps {
   email: string;
@@ -7,6 +8,8 @@ interface ContactMethodsSectionProps {
 }
 
 export default function ContactMethodsSection({ email, linkedInUrl }: ContactMethodsSectionProps) {
+  const t = useTranslations();
+
   const handleEmailClick = () => {
     window.location.href = `mailto:${email}`;
   };
@@ -19,8 +22,8 @@ export default function ContactMethodsSection({ email, linkedInUrl }: ContactMet
     <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-12'>
       <ContactMethodCard
         icon='📧'
-        title='Email Us'
-        description="Send us a message and we'll get back to you within 24 hours."
+        title={t('contact.methods.email') as string}
+        description={t('contact.methods.sendEmail') as string}
         buttonText={email}
         buttonVariant='primary'
         onClick={handleEmailClick}
@@ -28,9 +31,9 @@ export default function ContactMethodsSection({ email, linkedInUrl }: ContactMet
 
       <ContactMethodCard
         icon='💼'
-        title='Connect on LinkedIn'
-        description='Follow our company page for updates and professional networking.'
-        buttonText='Visit LinkedIn'
+        title={t('contact.methods.linkedin') as string}
+        description={t('contact.methods.connectLinkedin') as string}
+        buttonText={t('contact.methods.connectLinkedin') as string}
         buttonVariant='secondary'
         onClick={handleLinkedInClick}
       />

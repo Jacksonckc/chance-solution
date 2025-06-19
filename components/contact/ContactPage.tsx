@@ -3,6 +3,7 @@ import ContactHeader from './ContactHeader';
 import ContactMethodsSection from './ContactMethodsSection';
 import CompanyInfoCard from './CompanyInfoCard';
 import ServicesOverview from './ServicesOverview';
+import { useTranslations } from '@/hooks/useTranslations';
 // import ContactForm from '@/components/molecules/ContactForm';
 
 interface ContactPageProps {
@@ -14,47 +15,46 @@ export default function ContactPage({
   email = 'jackson858216047@gmail.com',
   linkedInUrl = 'https://www.linkedin.com/company/chan-ce-solution-ltd-co/?viewAsMember=true'
 }: ContactPageProps) {
+  const t = useTranslations();
+
   const companyInfoItems = [
     {
       icon: '🎯',
-      title: 'Our Mission',
-      description:
-        'Building powerful, user-friendly web applications designed to meet the needs of small businesses and fuel their success.'
+      title: t('contact.company.mission.title') as string,
+      description: t('contact.company.mission.description') as string
     },
     {
       icon: '🚀',
-      title: 'Technology Focus',
-      description:
-        'Specializing in modern web technologies, responsive design, and scalable solutions that grow with your business.'
+      title: t('contact.company.technology.title') as string,
+      description: t('contact.company.technology.description') as string
     },
     {
       icon: '🤝',
-      title: 'Partnership Approach',
-      description:
-        'We work closely with our clients to understand their unique needs and deliver customized solutions.'
+      title: t('contact.company.partnership.title') as string,
+      description: t('contact.company.partnership.description') as string
     }
   ];
 
   const services = [
     {
       icon: '🌐',
-      title: 'Web Development',
-      description: 'Custom websites and web applications'
+      title: t('contact.services.webDevelopment.title') as string,
+      description: t('contact.services.webDevelopment.description') as string
     },
     {
       icon: '📱',
-      title: 'Responsive Design',
-      description: 'Mobile-first, cross-platform solutions'
+      title: t('contact.services.responsiveDesign.title') as string,
+      description: t('contact.services.responsiveDesign.description') as string
     },
     {
       icon: '⚡',
-      title: 'Performance',
-      description: 'Fast, optimized, and scalable applications'
+      title: t('contact.services.performance.title') as string,
+      description: t('contact.services.performance.description') as string
     },
     {
       icon: '🛠️',
-      title: 'Support',
-      description: 'Ongoing maintenance and updates'
+      title: t('contact.services.support.title') as string,
+      description: t('contact.services.support.description') as string
     }
   ];
 

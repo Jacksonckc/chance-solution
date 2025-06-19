@@ -1,0 +1,235 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "jobs": "Trabajos",
+    "contact": "Contacto",
+    "downloadVideo": "Descargar Video",
+    "settings": "Configuración",
+    "theme": "Tema",
+    "language": "Idioma"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "apply": "Aplicar",
+    "learnMore": "Saber Más",
+    "getInTouch": "Ponte en Contacto",
+    "startProject": "Inicia tu Proyecto",
+    "tryTools": "Prueba Nuestras Herramientas",
+    "warning": "Advertencia",
+    "close": "Cerrar"
+  },
+  "home": {
+    "title": "Bienvenido a Chan'ce Solution",
+    "subtitle": "Construyendo aplicaciones web poderosas para pequeñas empresas",
+    "description": "Nos especializamos en crear soluciones web modernas y responsivas que ayudan a las empresas a crecer y tener éxito en el mundo digital.",
+    "cta": "Comenzar"
+  },
+  "about": {
+    "title": "Acerca de Chan'ce Solution",
+    "subtitle": "Tu Socio en el Éxito Digital",
+    "description": "Somos un equipo apasionado de desarrolladores dedicados a crear soluciones web innovadoras que impulsan el crecimiento empresarial.",
+    "hero": {
+      "title": "Acerca de Chan'ce Solution",
+      "subtitle": "Somos una empresa apasionada de desarrollo web dedicada a transformar negocios a través de soluciones digitales innovadoras. Nuestra misión es crear aplicaciones poderosas y fáciles de usar que impulsen el crecimiento y el éxito de las pequeñas empresas."
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Empoderar a las pequeñas empresas con tecnologías web de vanguardia y experiencias de usuario excepcionales."
+    },
+    "vision": {
+      "title": "Nuestra Visión",
+      "description": "Ser el socio líder en desarrollo web para empresas que buscan transformación digital y crecimiento."
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "innovation": {
+        "title": "Innovación",
+        "description": "Nos mantenemos a la vanguardia de las tendencias tecnológicas para entregar soluciones de vanguardia que den a nuestros clientes una ventaja competitiva."
+      },
+      "partnership": {
+        "title": "Asociación",
+        "description": "Trabajamos estrechamente con nuestros clientes, tratando su éxito como nuestro propio éxito y construyendo relaciones a largo plazo."
+      },
+      "excellence": {
+        "title": "Excelencia",
+        "description": "Mantenemos los más altos estándares en calidad de código, rendimiento y experiencia de usuario."
+      },
+      "growth": {
+        "title": "Crecimiento",
+        "description": "Ayudamos a las empresas a escalar y crecer a través de soluciones web escalables y mantenibles."
+      }
+    },
+    "services": {
+      "title": "Nuestros Servicios",
+      "subtitle": "Ofrecemos servicios integrales de desarrollo web adaptados para satisfacer las necesidades únicas de pequeñas empresas y startups.",
+      "webDevelopment": {
+        "title": "Desarrollo Web",
+        "description": "Sitios web y aplicaciones web personalizadas construidas con tecnologías modernas.",
+        "features": [
+          "Diseño responsivo para todos los dispositivos",
+          "Optimizado para SEO para mejor visibilidad",
+          "Carga rápida y rendimiento",
+          "Arquitectura escalable"
+        ]
+      },
+      "mobileFirst": {
+        "title": "Diseño Mobile-First",
+        "description": "Soluciones optimizadas para móviles que funcionan perfectamente en todas las plataformas.",
+        "features": [
+          "Aplicaciones Web Progresivas (PWA)",
+          "Compatibilidad multiplataforma",
+          "Interfaces táctiles",
+          "Funcionalidad offline"
+        ]
+      },
+      "performance": {
+        "title": "Optimización de Rendimiento",
+        "description": "Aplicaciones súper rápidas que proporcionan experiencias de usuario excepcionales.",
+        "features": [
+          "Optimización de código",
+          "Compresión de imágenes y recursos",
+          "Estrategias de caché",
+          "Integración CDN"
+        ]
+      },
+      "maintenance": {
+        "title": "Mantenimiento y Soporte",
+        "description": "Soporte y mantenimiento continuo para mantener tus aplicaciones funcionando sin problemas.",
+        "features": [
+          "Actualizaciones regulares y parches de seguridad",
+          "Monitoreo 24/7",
+          "Respaldo y recuperación",
+          "Soporte técnico"
+        ]
+      }
+    },
+    "techStack": {
+      "title": "Stack Tecnológico",
+      "subtitle": "Usamos tecnologías de vanguardia para construir aplicaciones web robustas, escalables y mantenibles que brindan experiencias de usuario excepcionales.",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Herramientas y Plataformas",
+      "performance": "Rendimiento",
+      "evolving": "Siempre aprendiendo y adoptando nuevas tecnologías para mantenernos a la vanguardia",
+      "continuously": "Continuamente evolucionando nuestro stack tecnológico"
+    },
+    "cta": {
+      "title": "¿Listo para Transformar tu Negocio?",
+      "subtitle": "Hablemos sobre cómo Chan'ce Solution puede ayudarte a construir la aplicación web perfecta para las necesidades de tu negocio. Estamos aquí para convertir tu visión en realidad.",
+      "joinTeam": "¿Buscas unirte a nuestro equipo? Revisa nuestras vacantes actuales"
+    }
+  },
+  "jobs": {
+    "title": "Vacantes de Empleo",
+    "subtitle": "Únete a nuestro equipo y ayúdanos a construir soluciones increíbles",
+    "location": "Ubicación",
+    "experience": "Experiencia",
+    "applyNow": "Aplicar Ahora",
+    "noJobs": "No hay vacantes disponibles en este momento",
+    "checkBack": "Por favor revisa más tarde para nuevas oportunidades"
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "description": "¿Listo para transformar tu negocio con poderosas soluciones web? Hablemos sobre cómo Chan'ce Solution puede ayudarte a tener éxito.",
+    "methods": {
+      "title": "Métodos de Contacto",
+      "email": "Correo Electrónico",
+      "linkedin": "LinkedIn",
+      "sendEmail": "Enviar Correo",
+      "connectLinkedin": "Conectar en LinkedIn"
+    },
+    "company": {
+      "title": "Acerca de Nuestra Empresa",
+      "mission": {
+        "title": "Nuestra Misión",
+        "description": "Construir aplicaciones web poderosas y fáciles de usar diseñadas para satisfacer las necesidades de las pequeñas empresas e impulsar su éxito."
+      },
+      "technology": {
+        "title": "Enfoque Tecnológico",
+        "description": "Especializándonos en tecnologías web modernas, diseño responsivo y soluciones escalables que crecen con tu negocio."
+      },
+      "partnership": {
+        "title": "Enfoque de Asociación",
+        "description": "Trabajamos de cerca con nuestros clientes para entender sus necesidades únicas y entregar soluciones personalizadas."
+      }
+    },
+    "services": {
+      "title": "Nuestros Servicios",
+      "webDevelopment": {
+        "title": "Desarrollo Web",
+        "description": "Sitios web y aplicaciones web personalizadas"
+      },
+      "responsiveDesign": {
+        "title": "Diseño Responsivo",
+        "description": "Soluciones multiplataforma con enfoque móvil"
+      },
+      "performance": {
+        "title": "Rendimiento",
+        "description": "Aplicaciones rápidas, optimizadas y escalables"
+      },
+      "support": {
+        "title": "Soporte",
+        "description": "Mantenimiento y actualizaciones continuas"
+      }
+    },
+    "form": {
+      "title": "Envíanos un Mensaje",
+      "name": "Nombre",
+      "email": "Email",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "namePlaceholder": "Tu nombre",
+      "emailPlaceholder": "tu.email@ejemplo.com",
+      "subjectPlaceholder": "¿De qué se trata?",
+      "messagePlaceholder": "Cuéntanos sobre tu proyecto o consulta...",
+      "sending": "Enviando...",
+      "sendMessage": "Enviar Mensaje",
+      "success": "¡Gracias! Tu mensaje ha sido enviado exitosamente.",
+      "error": "Lo sentimos, hubo un error al enviar tu mensaje. Por favor intenta de nuevo o contáctanos directamente."
+    }
+  },
+  "videoDownload": {
+    "title": "Descargador de Videos de YouTube",
+    "urlLabel": "URL de YouTube (Requerido para \"Descargar Video\", opcional para \"Descargar Tendencia\")",
+    "urlPlaceholder": "https://www.youtube.com/watch?v=...",
+    "durationLabel": "Duración (segundos) - Dejar vacío para video completo",
+    "durationPlaceholder": "300",
+    "entireVideo": "Descargará el video completo",
+    "partialVideo": "Descargará los primeros {duration} segundos ({minutes} minutos)",
+    "downloadVideo": "Descargar Video",
+    "downloadTrending": "Descargar Tendencia",
+    "downloading": "Descargando...",
+    "download": "Descargar",
+    "validation": {
+      "noUrl": "Por favor ingresa una URL de YouTube para descargar un video específico.",
+      "invalidUrl": "Por favor ingresa una URL válida de YouTube (ej., https://www.youtube.com/watch?v=...)",
+      "invalidDuration": "La duración debe ser un número positivo."
+    },
+    "history": {
+      "title": "Historial de Descargas",
+      "clearHistory": "Limpiar Historial",
+      "cleanupFiles": "Limpiar Archivos",
+      "cleaning": "Limpiando..."
+    },
+    "instructions": {
+      "title": "Cómo funciona:",
+      "downloadVideo": "Descargar Video: Requiere una URL de YouTube para descargar un video específico",
+      "downloadTrending": "Descargar Tendencia: Descarga el video más visto de tendencia del día (no se necesita URL)",
+      "duration": "Duración: Dejar vacío para descargar video completo, o especificar segundos para un segmento",
+      "format": "Los videos se guardan en formato MP4 con la mejor calidad hasta 1080p",
+      "download": "Haz clic en el botón de descarga para guardar el video en tu dispositivo",
+      "cleanup": "Usa \"Limpiar Archivos\" para eliminar archivos de video antiguos del servidor"
+    }
+  },
+  "footer": {
+    "builtWith": "Construido con ❤️ por Chan'ce Solution"
+  }
+}

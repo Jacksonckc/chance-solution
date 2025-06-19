@@ -8,6 +8,7 @@ A modern, responsive web application showcasing Chan'ce Solution's web developme
 - **Responsive Design**: Mobile-first, cross-platform solutions
 - **Performance Optimized**: Fast, optimized, and scalable applications
 - **Theme Support**: Dark/Light mode with smooth transitions
+- **Internationalization**: Multi-language support (English, Spanish, Chinese)
 - **Contact System**: Integrated contact form with email functionality
 - **Video Download Tool**: YouTube video downloader with trending video support
 - **Job Listings**: Dynamic job openings display
@@ -17,9 +18,28 @@ A modern, responsive web application showcasing Chan'ce Solution's web developme
 
 - **Framework**: [Next.js](https://nextjs.org/) with TypeScript
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) with custom CSS variables
+- **Internationalization**: [next-intl](https://next-intl-docs.vercel.app/) for multi-language support
 - **Package Manager**: [Yarn](https://yarnpkg.com/)
 - **Icons**: Emoji-based icons for simplicity
 - **Deployment**: Ready for Vercel deployment
+
+## 🌍 Internationalization
+
+The application supports multiple languages:
+
+- **English (en)** - Default language
+- **Spanish (es)** - Español
+- **Chinese (zh)** - 中文
+
+### Language Switching
+
+Users can switch languages using the language switcher component. URLs include locale prefixes:
+
+- English: `/en/about`
+- Spanish: `/es/about`
+- Chinese: `/zh/about`
+
+For detailed i18n documentation, see [docs/INTERNATIONALIZATION.md](docs/INTERNATIONALIZATION.md).
 
 ## 📁 Project Structure
 

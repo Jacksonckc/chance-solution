@@ -1,5 +1,6 @@
 import React from 'react';
 import Text from '@/components/atoms/Text';
+import { useTranslations } from '@/hooks/useTranslations';
 
 interface TechCategory {
   category: string;
@@ -11,21 +12,23 @@ interface TechnologyStackProps {
 }
 
 export default function TechnologyStack({ className = '' }: TechnologyStackProps) {
+  const t = useTranslations();
+
   const techStack: TechCategory[] = [
     {
-      category: 'Frontend',
+      category: t('about.techStack.frontend') as string,
       technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML5', 'CSS3']
     },
     {
-      category: 'Backend',
+      category: t('about.techStack.backend') as string,
       technologies: ['Node.js', 'Express', 'Python', 'PostgreSQL', 'MongoDB', 'REST APIs']
     },
     {
-      category: 'Tools & Platforms',
+      category: t('about.techStack.tools') as string,
       technologies: ['Git', 'Docker', 'AWS', 'Vercel', 'Figma', 'VS Code']
     },
     {
-      category: 'Performance',
+      category: t('about.techStack.performance') as string,
       technologies: ['Webpack', 'Babel', 'Lighthouse', 'Core Web Vitals', 'CDN', 'Caching']
     }
   ];
@@ -35,15 +38,14 @@ export default function TechnologyStack({ className = '' }: TechnologyStackProps
       <div className='max-w-6xl mx-auto px-6'>
         <div className='text-center mb-16'>
           <Text variant='h1' as='h2' className='mb-6'>
-            Technology Stack
+            {t('about.techStack.title')}
           </Text>
           <Text
             variant='body1'
             as='p'
             className='max-w-3xl mx-auto'
             style={{ color: 'var(--color-text-light)' }}>
-            We use cutting-edge technologies to build robust, scalable, and maintainable web
-            applications that deliver exceptional user experiences.
+            {t('about.techStack.subtitle')}
           </Text>
         </div>
 
@@ -78,13 +80,13 @@ export default function TechnologyStack({ className = '' }: TechnologyStackProps
             as='p'
             className='mb-4'
             style={{ color: 'var(--color-text-light)' }}>
-            Always learning and adopting new technologies to stay ahead of the curve
+            {t('about.techStack.evolving')}
           </Text>
           <div
             className='flex justify-center items-center gap-2 text-sm'
             style={{ color: 'var(--color-text-light)' }}>
             <span>🔄</span>
-            <span>Continuously evolving our tech stack</span>
+            <span>{t('about.techStack.continuously')}</span>
           </div>
         </div>
       </div>

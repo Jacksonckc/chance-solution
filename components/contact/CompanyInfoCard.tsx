@@ -1,5 +1,6 @@
 import React from 'react';
 import Text from '@/components/atoms/Text';
+import { useTranslations } from '@/hooks/useTranslations';
 
 interface InfoItem {
   icon: string;
@@ -12,14 +13,14 @@ interface CompanyInfoCardProps {
   items: InfoItem[];
 }
 
-export default function CompanyInfoCard({
-  title = "About Chan'ce Solution",
-  items
-}: CompanyInfoCardProps) {
+export default function CompanyInfoCard({ title, items }: CompanyInfoCardProps) {
+  const t = useTranslations();
+  const displayTitle = title || (t('contact.company.title') as string);
+
   return (
     <div className='card p-8 mb-12'>
       <Text variant='h2' as='h2' className='mb-6 text-center'>
-        {title}
+        {displayTitle}
       </Text>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
         {items.map((item, index) => (

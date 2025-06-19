@@ -1,0 +1,198 @@
+{
+  "navigation": {
+    "home": "首页",
+    "about": "关于",
+    "jobs": "工作",
+    "contact": "联系",
+    "downloadVideo": "下载视频",
+    "settings": "设置",
+    "theme": "主题",
+    "language": "语言"
+  },
+  "home": {
+    "title": "欢迎来到 Chan'ce Solution",
+    "subtitle": "为小企业构建强大的网络应用",
+    "description": "我们专注于创建现代化、响应式的网络解决方案，帮助企业在这个数字世界中成长和成功。",
+    "cta": "开始使用",
+    "learnMore": "了解更多"
+  },
+  "about": {
+    "title": "关于 Chan'ce Solution",
+    "subtitle": "您数字成功的合作伙伴",
+    "description": "我们是一个充满激情的开发团队，致力于创建推动业务增长的创新网络解决方案。",
+    "hero": {
+      "title": "关于 Chan'ce Solution",
+      "subtitle": "我们是一家充满激情的网络开发公司，致力于通过创新数字解决方案转变业务。我们的使命是创建强大、用户友好的应用程序，推动小企业的成长和成功。"
+    },
+    "mission": {
+      "title": "我们的使命",
+      "description": "通过尖端网络技术和卓越的用户体验来赋能小企业。"
+    },
+    "vision": {
+      "title": "我们的愿景",
+      "description": "成为寻求数字化转型和增长的企业的主要网络开发合作伙伴。"
+    },
+    "values": {
+      "title": "我们的价值观",
+      "innovation": {
+        "title": "创新",
+        "description": "我们走在技术趋势前沿，提供尖端解决方案，为客户提供竞争优势。"
+      },
+      "partnership": {
+        "title": "合作",
+        "description": "我们与客户密切合作，将他们的成功视为我们自己的成功，建立长期关系。"
+      },
+      "excellence": {
+        "title": "卓越",
+        "description": "我们在代码质量、性能和用户体验方面保持最高标准。"
+      },
+      "growth": {
+        "title": "成长",
+        "description": "我们帮助企业通过可扩展、可维护的网络解决方案实现扩展和增长。"
+      }
+    },
+    "services": {
+      "title": "我们的服务",
+      "subtitle": "我们提供全面的网络开发服务，专门满足小企业和初创企业的独特需求。",
+      "webDevelopment": {
+        "title": "网络开发",
+        "description": "使用现代技术构建的定制网站和网络应用程序。",
+        "features": [
+          "适用于所有设备的响应式设计",
+          "SEO 优化以提高可见性",
+          "快速加载和性能",
+          "可扩展架构"
+        ]
+      },
+      "mobileFirst": {
+        "title": "移动优先设计",
+        "description": "移动优化解决方案，在所有平台上无缝运行。",
+        "features": ["渐进式网络应用程序 (PWA)", "跨平台兼容性", "触摸友好界面", "离线功能"]
+      },
+      "performance": {
+        "title": "性能优化",
+        "description": "超快速应用程序，提供卓越的用户体验。",
+        "features": ["代码优化", "图像和资源压缩", "缓存策略", "CDN 集成"]
+      },
+      "maintenance": {
+        "title": "维护和支持",
+        "description": "持续的支持和维护，确保您的应用程序平稳运行。",
+        "features": ["定期更新和安全补丁", "24/7 监控", "备份和恢复", "技术支持"]
+      }
+    },
+    "techStack": {
+      "title": "技术栈",
+      "subtitle": "我们使用尖端技术构建强大、可扩展和可维护的网络应用程序，提供卓越的用户体验。",
+      "frontend": "前端",
+      "backend": "后端",
+      "tools": "工具和平台",
+      "performance": "性能",
+      "evolving": "始终学习和采用新技术以保持领先地位",
+      "continuously": "持续发展我们的技术栈"
+    },
+    "cta": {
+      "title": "准备转变您的业务？",
+      "subtitle": "让我们讨论 Chan'ce Solution 如何帮助您为业务需求构建完美的网络应用程序。我们在这里将您的愿景变为现实。",
+      "joinTeam": "想加入我们的团队？查看我们当前的职位空缺"
+    }
+  },
+  "jobs": {
+    "title": "职位空缺",
+    "subtitle": "加入我们的团队，帮助我们构建令人惊叹的解决方案",
+    "location": "地点",
+    "experience": "经验",
+    "applyNow": "立即申请",
+    "noJobs": "目前没有职位空缺",
+    "checkBack": "请稍后再查看新的机会"
+  },
+  "videoDownload": {
+    "title": "YouTube 视频下载器",
+    "urlLabel": "YouTube URL（\"下载视频\"需要，\"下载热门\"可选）",
+    "urlPlaceholder": "https://www.youtube.com/watch?v=...",
+    "durationLabel": "时长（秒）- 留空下载完整视频",
+    "durationPlaceholder": "300",
+    "entireVideo": "将下载完整视频",
+    "partialVideo": "将下载前 {duration} 秒（{minutes} 分钟）",
+    "downloadVideo": "下载视频",
+    "downloadTrending": "下载热门",
+    "downloading": "下载中...",
+    "download": "下载",
+    "validation": {
+      "noUrl": "请输入 YouTube URL 来下载特定视频。",
+      "invalidUrl": "请输入有效的 YouTube URL（例如：https://www.youtube.com/watch?v=...）",
+      "invalidDuration": "时长必须是正数。"
+    },
+    "history": {
+      "title": "下载历史",
+      "clearHistory": "清除历史",
+      "cleanupFiles": "清理文件",
+      "cleaning": "清理中..."
+    },
+    "instructions": {
+      "title": "使用方法：",
+      "downloadVideo": "下载视频：需要 YouTube URL 来下载特定视频",
+      "downloadTrending": "下载热门：下载当天最受欢迎的热门视频（无需 URL）",
+      "duration": "时长：留空下载完整视频，或指定秒数下载片段",
+      "format": "视频以 MP4 格式保存，最高质量可达 1080p",
+      "download": "点击下载按钮将视频保存到您的设备",
+      "cleanup": "使用\"清理文件\"从服务器删除旧的视频文件"
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "description": "准备用强大的网络解决方案改造您的业务吗？让我们讨论 Chan'ce Solution 如何帮助您成功。",
+    "methods": {
+      "title": "联系方式",
+      "email": "电子邮件",
+      "linkedin": "LinkedIn",
+      "sendEmail": "发送邮件",
+      "connectLinkedin": "在 LinkedIn 上联系"
+    },
+    "company": {
+      "title": "关于我们公司",
+      "mission": {
+        "title": "我们的使命",
+        "description": "构建强大、用户友好的网络应用程序，旨在满足小企业的需求并推动其成功。"
+      },
+      "technology": {
+        "title": "技术重点",
+        "description": "专注于现代网络技术、响应式设计和随业务增长的可扩展解决方案。"
+      },
+      "partnership": {
+        "title": "合作伙伴方式",
+        "description": "我们与客户密切合作，了解他们的独特需求并提供定制解决方案。"
+      }
+    },
+    "services": {
+      "title": "我们的服务",
+      "webDevelopment": {
+        "title": "网络开发",
+        "description": "定制网站和网络应用程序"
+      },
+      "responsiveDesign": {
+        "title": "响应式设计",
+        "description": "移动优先、跨平台解决方案"
+      },
+      "performance": {
+        "title": "性能",
+        "description": "快速、优化和可扩展的应用程序"
+      },
+      "support": {
+        "title": "支持",
+        "description": "持续维护和更新"
+      }
+    }
+  },
+  "common": {
+    "submit": "提交",
+    "cancel": "取消",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "close": "关闭",
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "warning": "警告"
+  }
+}

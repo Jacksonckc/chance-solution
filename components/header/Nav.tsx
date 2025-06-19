@@ -4,7 +4,9 @@ import MenuBtn from './MenuBtn';
 import NavMenuItem from './NavMenuItem';
 import { useRouter } from 'next/router';
 import ThemeToggle from '../molecules/ThemeToggle';
+import LanguageSwitcher from '../molecules/LanguageSwitcher';
 import Text from '../atoms/Text';
+import { useTranslations } from '@/hooks/useTranslations';
 
 interface NavProps {
   isOpen: boolean;
@@ -14,25 +16,21 @@ interface NavProps {
 export default function Nav({ isOpen, toggleMenu }: NavProps) {
   const router = useRouter();
   const navRef = useRef<HTMLElement>(null);
+  const t = useTranslations();
 
   const handleMenuItemClick = (event: React.MouseEvent<HTMLButtonElement>, path?: string) => {
-    const target = event.target as HTMLButtonElement;
-    if (target.innerText.toLowerCase() === 'home') {
-      router.push('/');
-    } else if (path) {
-      router.push(`/${path}`);
-    } else {
-      router.push(`/${target.innerText.toLowerCase()}`);
+    if (path) {
+      router.push(path);
     }
     toggleMenu();
   };
 
   const menuItems = [
-    { label: 'Home', path: undefined },
-    { label: 'About', path: undefined },
-    { label: 'Jobs', path: undefined },
-    { label: 'Contact', path: undefined },
-    { label: 'Download Video', path: 'downloadVideo' }
+    { label: t('navigation.home') as string, path: '/' },
+    { label: t('navigation.about') as string, path: '/about' },
+    { label: t('navigation.jobs') as string, path: '/jobs' },
+    { label: t('navigation.contact') as string, path: '/contact' },
+    { label: t('navigation.downloadVideo') as string, path: '/downloadVideo' }
   ];
 
   return (
@@ -78,13 +76,34 @@ export default function Nav({ isOpen, toggleMenu }: NavProps) {
             />
           ))}
 
-          {/* Theme Toggle for Mobile */}
+          {/* Settings Section */}
           <li className='p-2 transition-colors duration-200 border-t border-gray-200 pt-4 mt-4'>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-4'>
               <Text variant='body2' style={{ color: 'var(--color-text-light)' }}>
-                Theme Settings
+                {t('navigation.settings') as string}
               </Text>
-              <ThemeToggle className='justify-start' />
+
+              {/* Theme Toggle */}
+              <div className='flex flex-col gap-2'>
+                <Text
+                  variant='body2'
+                  style={{ color: 'var(--color-text-light)' }}
+                  className='text-sm'>
+                  {t('navigation.theme') as string}
+                </Text>
+                <ThemeToggle className='justify-start' />
+              </div>
+
+              {/* Language Switcher */}
+              <div className='flex flex-col gap-2'>
+                <Text
+                  variant='body2'
+                  style={{ color: 'var(--color-text-light)' }}
+                  className='text-sm'>
+                  {t('navigation.language') as string}
+                </Text>
+                <LanguageSwitcher className='justify-start' />
+              </div>
             </div>
           </li>
         </ul>

@@ -1,0 +1,221 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "jobs": "Jobs",
+    "contact": "Contact",
+    "downloadVideo": "Download Video",
+    "settings": "Settings",
+    "theme": "Theme",
+    "language": "Language"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "apply": "Apply",
+    "learnMore": "Learn More",
+    "getInTouch": "Get in Touch",
+    "startProject": "Start Your Project",
+    "tryTools": "Try Our Tools",
+    "close": "Close",
+    "warning": "Warning"
+  },
+  "home": {
+    "title": "Welcome to Chan'ce Solution",
+    "subtitle": "Building powerful web applications for small businesses",
+    "description": "We specialize in creating modern, responsive web solutions that help businesses grow and succeed in the digital world.",
+    "cta": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "about": {
+    "title": "About Chan'ce Solution",
+    "subtitle": "Your Partner in Digital Success",
+    "description": "We are a passionate team of developers dedicated to creating innovative web solutions that drive business growth.",
+    "hero": {
+      "title": "About Chan'ce Solution",
+      "subtitle": "We are a passionate web development company dedicated to transforming businesses through innovative digital solutions. Our mission is to create powerful, user-friendly applications that drive growth and success for small businesses."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower small businesses with cutting-edge web technologies and exceptional user experiences."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the leading web development partner for businesses seeking digital transformation and growth."
+    },
+    "values": {
+      "title": "Our Values",
+      "innovation": {
+        "title": "Innovation",
+        "description": "We stay ahead of technology trends to deliver cutting-edge solutions that give our clients a competitive edge."
+      },
+      "partnership": {
+        "title": "Partnership",
+        "description": "We work closely with our clients, treating their success as our own and building long-term relationships."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "We maintain the highest standards in code quality, performance, and user experience."
+      },
+      "growth": {
+        "title": "Growth",
+        "description": "We help businesses scale and grow through scalable, maintainable web solutions."
+      }
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "We offer comprehensive web development services tailored to meet the unique needs of small businesses and startups.",
+      "webDevelopment": {
+        "title": "Web Development",
+        "description": "Custom websites and web applications built with modern technologies.",
+        "features": [
+          "Responsive design for all devices",
+          "SEO-optimized for better visibility",
+          "Fast loading and performance",
+          "Scalable architecture"
+        ]
+      },
+      "mobileFirst": {
+        "title": "Mobile-First Design",
+        "description": "Mobile-optimized solutions that work seamlessly across all platforms.",
+        "features": [
+          "Progressive Web Apps (PWA)",
+          "Cross-platform compatibility",
+          "Touch-friendly interfaces",
+          "Offline functionality"
+        ]
+      },
+      "performance": {
+        "title": "Performance Optimization",
+        "description": "Lightning-fast applications that provide exceptional user experiences.",
+        "features": [
+          "Code optimization",
+          "Image and asset compression",
+          "Caching strategies",
+          "CDN integration"
+        ]
+      },
+      "maintenance": {
+        "title": "Maintenance & Support",
+        "description": "Ongoing support and maintenance to keep your applications running smoothly.",
+        "features": [
+          "Regular updates and security patches",
+          "24/7 monitoring",
+          "Backup and recovery",
+          "Technical support"
+        ]
+      }
+    },
+    "techStack": {
+      "title": "Technology Stack",
+      "subtitle": "We use cutting-edge technologies to build robust, scalable, and maintainable web applications that deliver exceptional user experiences.",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools & Platforms",
+      "performance": "Performance",
+      "evolving": "Always learning and adopting new technologies to stay ahead of the curve",
+      "continuously": "Continuously evolving our tech stack"
+    },
+    "cta": {
+      "title": "Ready to Transform Your Business?",
+      "subtitle": "Let's discuss how Chan'ce Solution can help you build the perfect web application for your business needs. We're here to turn your vision into reality.",
+      "joinTeam": "Looking to join our team? Check out our current openings"
+    }
+  },
+  "jobs": {
+    "title": "Job Openings",
+    "subtitle": "Join our team and help us build amazing solutions",
+    "location": "Location",
+    "experience": "Experience",
+    "applyNow": "Apply Now",
+    "noJobs": "No job openings at the moment",
+    "checkBack": "Please check back later for new opportunities"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Ready to transform your business with powerful web solutions? Let's discuss how Chan'ce Solution can help you succeed.",
+    "methods": {
+      "title": "Contact Methods",
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "sendEmail": "Send Email",
+      "connectLinkedin": "Connect on LinkedIn"
+    },
+    "company": {
+      "title": "About Our Company",
+      "mission": {
+        "title": "Our Mission",
+        "description": "Building powerful, user-friendly web applications designed to meet the needs of small businesses and fuel their success."
+      },
+      "technology": {
+        "title": "Technology Focus",
+        "description": "Specializing in modern web technologies, responsive design, and scalable solutions that grow with your business."
+      },
+      "partnership": {
+        "title": "Partnership Approach",
+        "description": "We work closely with our clients to understand their unique needs and deliver customized solutions."
+      }
+    },
+    "services": {
+      "title": "Our Services",
+      "webDevelopment": {
+        "title": "Web Development",
+        "description": "Custom websites and web applications"
+      },
+      "responsiveDesign": {
+        "title": "Responsive Design",
+        "description": "Mobile-first, cross-platform solutions"
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Fast, optimized, and scalable applications"
+      },
+      "support": {
+        "title": "Support",
+        "description": "Ongoing maintenance and updates"
+      }
+    }
+  },
+  "videoDownload": {
+    "title": "YouTube Video Downloader",
+    "urlLabel": "YouTube URL (Required for \"Download Video\", optional for \"Download Trending\")",
+    "urlPlaceholder": "https://www.youtube.com/watch?v=...",
+    "durationLabel": "Duration (seconds) - Leave empty for entire video",
+    "durationPlaceholder": "300",
+    "entireVideo": "Will download the entire video",
+    "partialVideo": "Will download first {duration} seconds ({minutes} minutes)",
+    "downloadVideo": "Download Video",
+    "downloadTrending": "Download Trending",
+    "downloading": "Downloading...",
+    "download": "Download",
+    "validation": {
+      "noUrl": "Please enter a YouTube URL to download a specific video.",
+      "invalidUrl": "Please enter a valid YouTube URL (e.g., https://www.youtube.com/watch?v=...)",
+      "invalidDuration": "Duration must be a positive number."
+    },
+    "history": {
+      "title": "Download History",
+      "clearHistory": "Clear History",
+      "cleanupFiles": "Cleanup Files",
+      "cleaning": "Cleaning..."
+    },
+    "instructions": {
+      "title": "How it works:",
+      "downloadVideo": "Download Video: Requires a YouTube URL to download a specific video",
+      "downloadTrending": "Download Trending: Downloads the most viewed trending video of the day (no URL needed)",
+      "duration": "Duration: Leave empty to download entire video, or specify seconds for a segment",
+      "format": "Videos are saved in MP4 format with best quality up to 1080p",
+      "download": "Click the download button to save the video to your device",
+      "cleanup": "Use \"Cleanup Files\" to remove old video files from the server"
+    }
+  },
+  "footer": {
+    "builtWith": "Built with ❤️ by Chan'ce Solution"
+  }
+}
