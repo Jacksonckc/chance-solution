@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import MenuBtn from './MenuBtn';
 import { useRouter } from 'next/router';
 import ThemeToggle from '../ThemeToggle';
+import Text from '../common/Text';
 
 interface NavProps {
   isOpen: boolean;
@@ -62,50 +63,55 @@ export default function Nav({ isOpen, toggleMenu }: NavProps) {
           <li className='p-2 transition-colors duration-200'>
             <button
               onClick={handleMenuItemClick}
-              className='hover:opacity-70 transition-opacity'
-              style={{ color: 'var(--color-text)' }}>
-              Home
+              className='hover:opacity-70 transition-opacity w-full text-left'>
+              <Text variant='h3' as='span'>
+                Home
+              </Text>
             </button>
           </li>
           <li className='p-2 transition-colors duration-200'>
             <button
               onClick={handleMenuItemClick}
-              className='hover:opacity-70 transition-opacity'
-              style={{ color: 'var(--color-text)' }}>
-              About
+              className='hover:opacity-70 transition-opacity w-full text-left'>
+              <Text variant='h3' as='span'>
+                About
+              </Text>
             </button>
           </li>
           <li className='p-2 transition-colors duration-200'>
             <button
               onClick={handleMenuItemClick}
-              className='hover:opacity-70 transition-opacity'
-              style={{ color: 'var(--color-text)' }}>
-              Jobs
+              className='hover:opacity-70 transition-opacity w-full text-left'>
+              <Text variant='h3' as='span'>
+                Jobs
+              </Text>
             </button>
           </li>
           <li className='p-2 transition-colors duration-200'>
             <button
               onClick={handleMenuItemClick}
-              className='hover:opacity-70 transition-opacity'
-              style={{ color: 'var(--color-text)' }}>
-              Contact
+              className='hover:opacity-70 transition-opacity w-full text-left'>
+              <Text variant='h3' as='span'>
+                Contact
+              </Text>
             </button>
           </li>
           <li className='p-2 transition-colors duration-200'>
             <button
               onClick={(e) => handleMenuItemClick(e, 'downloadVideo')}
-              className='hover:opacity-70 transition-opacity'
-              style={{ color: 'var(--color-text)' }}>
-              Download Video
+              className='hover:opacity-70 transition-opacity w-full text-left'>
+              <Text variant='h3' as='span'>
+                Download Video
+              </Text>
             </button>
           </li>
 
           {/* Theme Toggle for Mobile */}
           <li className='p-2 transition-colors duration-200 border-t border-gray-200 pt-4 mt-4'>
             <div className='flex flex-col gap-2'>
-              <span className='text-sm font-medium' style={{ color: 'var(--color-text-light)' }}>
+              <Text variant='body2' style={{ color: 'var(--color-text-light)' }}>
                 Theme Settings
-              </span>
+              </Text>
               <ThemeToggle className='justify-start' />
             </div>
           </li>

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Nav from './Nav';
+import Text from '../common/Text';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,10 +46,10 @@ export default function Header() {
       }}>
       <Nav isOpen={isOpen} toggleMenu={toggleMenu} />
 
-      <div
-        className='absolute left-1/2 transform -translate-x-1/2 text-xl font-bold font-display'
-        style={{ color: 'var(--color-text)' }}>
-        Chan&apos;ce Solution
+      <div className='absolute left-1/2 transform -translate-x-1/2'>
+        <Text variant='h1' as='h1' className='font-bold'>
+          Chan&apos;ce Solution
+        </Text>
       </div>
     </header>
   );

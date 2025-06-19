@@ -2,6 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Button from '@/components/common/Button';
+import Text from '@/components/common/Text';
 
 const Custom404 = () => {
   const router = useRouter();
@@ -9,15 +10,15 @@ const Custom404 = () => {
   return (
     <div className='flex flex-col items-center justify-center min-h-[calc(100vh-80px)] text-center px-6'>
       <div className='card p-8 max-w-md'>
-        <h1 className='text-6xl mb-4 font-display' style={{ color: 'var(--color-text)' }}>
+        <Text variant='display1' as='h1' className='mb-4'>
           404
-        </h1>
-        <h2 className='text-2xl mb-2 font-semibold' style={{ color: 'var(--color-text)' }}>
+        </Text>
+        <Text variant='h2' as='h2' className='mb-2'>
           Page Not Found
-        </h2>
-        <p className='text-lg mb-8' style={{ color: 'var(--color-text-light)' }}>
+        </Text>
+        <Text variant='body1' as='p' className='mb-8'>
           Sorry, the page you are looking for does not exist.
-        </p>
+        </Text>
 
         <div className='flex flex-col sm:flex-row gap-4 justify-center'>
           <Button className='btn-primary' onClick={() => router.back()}>

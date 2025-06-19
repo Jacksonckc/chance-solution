@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from './common/Button';
 import VideoPreview from './VideoPreview';
+import Text from './common/Text';
 import { useVideoDownload } from '../hooks/useVideoDownload';
 import { VideoDownloadInput } from '../lib/graphql/schema';
 
@@ -176,21 +177,21 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
     <div className={`max-w-4xl mx-auto p-6 ${className}`}>
       {/* Main Content */}
       <div className='card p-6 animate-fade-in'>
-        <h2
-          className='text-3xl font-bold mb-6 text-center font-display'
-          style={{ color: 'var(--color-text)' }}>
+        <Text variant='h1' as='h2' className='mb-6 text-center'>
           YouTube Video Downloader
-        </h2>
+        </Text>
 
         <div className='space-y-6'>
           {/* URL Input */}
           <div>
             <label
               htmlFor='url'
-              className='block text-sm font-medium mb-2'
+              className='block mb-2 font-medium'
               style={{ color: 'var(--color-text)' }}>
-              YouTube URL (Required for &quot;Download Video&quot;, optional for &quot;Download
-              Trending&quot;)
+              <Text variant='body2'>
+                YouTube URL (Required for &quot;Download Video&quot;, optional for &quot;Download
+                Trending&quot;)
+              </Text>
             </label>
             <input
               type='url'
@@ -204,12 +205,9 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
 
           {/* Duration Input */}
           <div>
-            <label
-              htmlFor='duration'
-              className='block text-sm font-medium mb-2'
-              style={{ color: 'var(--color-text)' }}>
+            <Text variant='body2' as='label' htmlFor='duration' className='block mb-2 font-medium'>
               Duration (seconds) - Leave empty for entire video
-            </label>
+            </Text>
             <input
               type='number'
               id='duration'
@@ -220,13 +218,13 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
               placeholder='300'
               className='input-field'
             />
-            <p className='text-sm mt-1' style={{ color: 'var(--color-text-light)' }}>
+            <Text variant='body3' className='mt-1' style={{ color: 'var(--color-text-light)' }}>
               {duration === ''
                 ? 'Will download the entire video'
                 : `Will download first ${duration} seconds (${Math.floor(
                     Number(duration) / 60
                   )} minutes)`}
-            </p>
+            </Text>
           </div>
 
           {/* Action Buttons */}
@@ -250,7 +248,7 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
           {validationError && (
             <div className='p-3 rounded-md bg-yellow-100 text-yellow-800 border border-yellow-200'>
               <div className='flex justify-between items-start'>
-                <span>⚠️ {validationError}</span>
+                <Text variant='body2'>⚠️ {validationError}</Text>
                 <button
                   onClick={() => setValidationError(null)}
                   className='text-yellow-600 hover:text-yellow-800 text-sm'>
@@ -264,7 +262,7 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
           {error && (
             <div className='p-3 rounded-md bg-red-100 text-red-800 border border-red-200'>
               <div className='flex justify-between items-start'>
-                <span>{error}</span>
+                <Text variant='body2'>{error}</Text>
                 <button onClick={clearError} className='text-red-600 hover:text-red-800 text-sm'>
                   ✕
                 </button>
@@ -276,7 +274,7 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
           {cleanupMessage && (
             <div className='p-3 rounded-md bg-blue-100 text-blue-800 border border-blue-200'>
               <div className='flex justify-between items-start'>
-                <span>{cleanupMessage}</span>
+                <Text variant='body2'>{cleanupMessage}</Text>
                 <button
                   onClick={() => setCleanupMessage(null)}
                   className='text-blue-600 hover:text-blue-800 text-sm'>
@@ -289,7 +287,9 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
           {/* Success Message */}
           {lastDownload?.success && (
             <div className='p-3 rounded-md bg-green-100 text-green-800 border border-green-200'>
-              <p className='font-medium'>✅ {lastDownload.message}</p>
+              <Text variant='body2' className='font-medium'>
+                ✅ {lastDownload.message}
+              </Text>
             </div>
           )}
 
@@ -309,9 +309,9 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
           {downloadHistory.length > 0 && (
             <div className='card p-4'>
               <div className='flex justify-between items-center mb-3'>
-                <h3 className='font-medium' style={{ color: 'var(--color-text)' }}>
+                <Text variant='h4' as='h3' className='font-medium'>
                   Download History
-                </h3>
+                </Text>
                 <div className='flex gap-2'>
                   <button
                     onClick={clearHistory}
@@ -344,7 +344,9 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
                         />
                       ) : (
                         <div className='text-sm p-2 bg-white rounded border border-red-200'>
-                          <span className='text-red-600 font-medium'>❌ {download.message}</span>
+                          <Text variant='body3' className='text-red-600 font-medium'>
+                            ❌ {download.message}
+                          </Text>
                         </div>
                       )}
                     </div>
@@ -355,9 +357,9 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
 
           {/* Instructions */}
           <div className='card p-4'>
-            <h3 className='font-medium mb-2' style={{ color: 'var(--color-text)' }}>
+            <Text variant='h4' as='h3' className='mb-2'>
               How it works:
-            </h3>
+            </Text>
             <ul className='text-sm space-y-1' style={{ color: 'var(--color-text-light)' }}>
               <li>
                 • <strong>Download Video:</strong> Requires a YouTube URL to download a specific

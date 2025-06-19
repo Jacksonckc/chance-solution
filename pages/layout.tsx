@@ -3,10 +3,10 @@ import Header from '@/components/header/Header'; // Adjust the import path as ne
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <div
-      className='relative min-h-screen transition-colors duration-200'
+      className='relative transition-colors duration-200'
       style={{ backgroundColor: 'var(--color-background)' }}>
       <Header />
-      <main className='pt-[80px]'>{children}</main>
+      <main className='pt-[80px] max-h-[calc(100vh-80px)] overflow-scroll'>{children}</main>
     </div>
   );
 }
