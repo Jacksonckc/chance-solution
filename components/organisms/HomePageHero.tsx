@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from './common/Button';
-import Text from './common/Text';
+import Button from '../atoms/Button';
+import Text from '../atoms/Text';
 
 export default function HomePageHero() {
   return (
-    <div className='min-h-screen flex items-center justify-center'>
+    <div className='h-full flex items-center justify-center'>
       <div className='text-center max-w-4xl mx-auto px-6'>
         <Text variant='display1' as='h1' className='mb-6 font-bold'>
           Welcome to <span style={{ color: 'var(--color-primary)' }}>Chan&apos;ce Solution</span>

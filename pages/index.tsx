@@ -1,4 +1,4 @@
-import HomePageHero from '@/components/HomePageHero';
+import HomePageHero from '@/components/organisms/HomePageHero';
 
 export default function Home() {
   return <HomePageHero />;

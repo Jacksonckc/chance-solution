@@ -1,11 +1,9 @@
 import React from 'react';
-import VideoDownloader from '@/components/VideoDownloader';
+import VideoDownloader from '@/components/videoDownload/VideoDownloader';
 
 export default function DownloadVideoPage() {
   return (
-    <div
-      className='min-h-screen transition-colors duration-200'
-      style={{ backgroundColor: 'var(--color-background)' }}>
+    <div>
       <VideoDownloader />
     </div>
   );

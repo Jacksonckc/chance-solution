@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Button from './common/Button';
+import Button from '../atoms/Button';
 import VideoPreview from './VideoPreview';
-import Text from './common/Text';
-import { useVideoDownload } from '../hooks/useVideoDownload';
-import { VideoDownloadInput } from '../lib/graphql/schema';
-
-interface VideoDownloaderProps {
-  className?: string;
-}
+import Text from '../atoms/Text';
+import { useVideoDownload } from '../../hooks/useVideoDownload';
+import { VideoDownloadInput, VideoDownloaderProps } from '@/lib/types';
 
 export default function VideoDownloader({ className = '' }: VideoDownloaderProps) {
   const [url, setUrl] = useState('');
@@ -205,9 +201,12 @@ export default function VideoDownloader({ className = '' }: VideoDownloaderProps
 
           {/* Duration Input */}
           <div>
-            <Text variant='body2' as='label' htmlFor='duration' className='block mb-2 font-medium'>
-              Duration (seconds) - Leave empty for entire video
-            </Text>
+            <label
+              htmlFor='duration'
+              className='block mb-2 font-medium'
+              style={{ color: 'var(--color-text)' }}>
+              <Text variant='body2'>Duration (seconds) - Leave empty for entire video</Text>
+            </label>
             <input
               type='number'
               id='duration'

@@ -5,6 +5,14 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Poppins', 'system-ui', 'sans-serif'],
+        serif: ['Playfair Display', 'Georgia', 'serif'],
+        mono: ['Source Code Pro', 'Monaco', 'monospace'],
+        rounded: ['Quicksand', 'system-ui', 'sans-serif'],
+        modern: ['Montserrat', 'system-ui', 'sans-serif']
+      },
       colors: {
         // Light Pink Theme
         pink: {
@@ -140,10 +148,6 @@ export default {
             dark: '#f5f5f5'
           }
         }
-      },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Poppins', 'system-ui', 'sans-serif']
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

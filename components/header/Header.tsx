@@ -1,10 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Nav from './Nav';
-import Text from '../common/Text';
+import Text from '../atoms/Text';
+import { useRouter } from 'next/router';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
@@ -46,7 +48,9 @@ export default function Header() {
       }}>
       <Nav isOpen={isOpen} toggleMenu={toggleMenu} />
 
-      <div className='absolute left-1/2 transform -translate-x-1/2'>
+      <div
+        className='absolute left-1/2 transform -translate-x-1/2 cursor-pointer'
+        onClick={() => router.push('/')}>
         <Text variant='h1' as='h1' className='font-bold'>
           Chan&apos;ce Solution
         </Text>

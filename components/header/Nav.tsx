@@ -2,8 +2,8 @@ import React, { useRef } from 'react';
 import classNames from 'classnames';
 import MenuBtn from './MenuBtn';
 import { useRouter } from 'next/router';
-import ThemeToggle from '../ThemeToggle';
-import Text from '../common/Text';
+import ThemeToggle from '../molecules/ThemeToggle';
+import Text from '../atoms/Text';
 
 interface NavProps {
   isOpen: boolean;

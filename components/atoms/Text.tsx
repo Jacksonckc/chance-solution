@@ -35,17 +35,17 @@ export default function Text({
 }: TextProps) {
   const { theme } = useTheme();
 
-  // Theme-specific font families
+  // Theme-specific font families with special, readable fonts
   const getThemeFont = () => {
     switch (theme) {
       case 'pink':
-        return 'font-display'; // Poppins for pink theme
+        return 'font-rounded'; // Quicksand - rounded, friendly, modern
       case 'blue':
-        return 'font-sans'; // Inter for blue theme
+        return 'font-modern'; // Montserrat - clean, professional, geometric
       case 'neutral':
-        return 'font-sans'; // Inter for neutral theme
+        return 'font-serif'; // Playfair Display - elegant, sophisticated
       default:
-        return 'font-display';
+        return 'font-rounded';
     }
   };
 
@@ -92,7 +92,7 @@ export default function Text({
         return `${baseClasses} font-sans text-xs md:text-sm leading-relaxed`;
 
       case 'caption':
-        return `${baseClasses} font-sans text-xs leading-relaxed`;
+        return `${baseClasses} font-mono text-xs leading-relaxed`;
 
       case 'overline':
         return `${baseClasses} font-sans text-xs font-medium uppercase tracking-wider`;

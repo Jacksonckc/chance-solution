@@ -6,7 +6,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       className='relative transition-colors duration-200'
       style={{ backgroundColor: 'var(--color-background)' }}>
       <Header />
-      <main className='pt-[80px] max-h-[calc(100vh-80px)] overflow-scroll'>{children}</main>
+      <main className='max-h-[calc(100vh-80px)] h-[calc(100vh-80px)] overflow-scroll'>
+        {children}
+      </main>
     </div>
   );
 }

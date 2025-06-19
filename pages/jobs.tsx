@@ -1,12 +1,12 @@
 import React from 'react';
 import jobs from '@/MockData/jobs.json';
-import Button from '@/components/common/Button';
-import Text from '@/components/common/Text';
+import Button from '@/components/atoms/Button';
+import Text from '@/components/atoms/Text';
 
 export default function JobsPage() {
   return (
     <div
-      className='min-h-screen p-6 transition-colors duration-200'
+      className='p-6 transition-colors duration-200'
       style={{ backgroundColor: 'var(--color-background)' }}>
       <div className='max-w-4xl mx-auto'>
         <div className='text-center mb-8'>

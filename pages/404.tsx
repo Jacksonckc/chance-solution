@@ -1,8 +1,8 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Button from '@/components/common/Button';
-import Text from '@/components/common/Text';
+import Button from '@/components/atoms/Button';
+import Text from '@/components/atoms/Text';
 
 const Custom404 = () => {
   const router = useRouter();
