@@ -87,6 +87,7 @@ def download_video_segment(video_url, output_path, duration=None):
         'outtmpl': output_path,
         'quiet': False,
         'no_warnings': False,
+        'cookiesfrombrowser': ('chrome',),  # Use cookies from Chrome browser
         'postprocessors': [{
             'key': 'FFmpegVideoConvertor',
             'preferedformat': 'mp4',
@@ -112,6 +113,23 @@ def download_video_segment(video_url, output_path, duration=None):
             return True
     except Exception as e:
         print(f"Error downloading video: {e}")
+        
+        # If cookies failed, try without cookies
+        if "Sign in to confirm you're not a bot" in str(e):
+            print("Trying without browser cookies...")
+            ydl_opts.pop('cookiesfrombrowser', None)
+            try:
+                with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                    if duration and duration > 0:
+                        print(f"Downloading first {duration//60} minutes of: {video_url}")
+                    else:
+                        print(f"Downloading entire video: {video_url}")
+                    ydl.download([video_url])
+                    print(f"Download completed! Saved to: {output_path}")
+                    return True
+            except Exception as e2:
+                print(f"Error downloading video (without cookies): {e2}")
+                return False
         return False
 
 def main():

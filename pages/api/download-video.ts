@@ -8,21 +8,19 @@ const execAsync = promisify(exec);
 
 async function checkAndInstallDependencies(): Promise<boolean> {
   try {
-    // Check if yt-dlp is installed
-    await execAsync('python3 -c "import yt_dlp"');
-    await execAsync('python3 -c "import requests"');
+    // Use the virtual environment's Python interpreter
+    const venvPython = path.join(process.cwd(), 'venv', 'bin', 'python');
+
+    // Check if yt-dlp is installed in the virtual environment
+    await execAsync(`"${venvPython}" -c "import yt_dlp"`);
+    await execAsync(`"${venvPython}" -c "import requests"`);
     return true;
   } catch (error) {
     console.log('Error checking dependencies:', error);
-    console.log('Installing Python dependencies...');
-    try {
-      const requirementsPath = path.join(process.cwd(), 'requirements.txt');
-      await execAsync(`pip3 install -r "${requirementsPath}"`);
-      return true;
-    } catch (installError) {
-      console.error('Failed to install dependencies:', installError);
-      return false;
-    }
+    console.log(
+      'Dependencies not found in virtual environment. Please run: source venv/bin/activate && pip install -r requirements.txt'
+    );
+    return false;
   }
 }
 
@@ -66,8 +64,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Path to the Python script in the scripts folder
     const scriptPath = path.join(process.cwd(), 'scripts', 'script.py');
 
-    // Build command arguments
-    let command = `python3 "${scriptPath}" --output "${outputPath}"`;
+    // Build command arguments using virtual environment Python
+    const venvPython = path.join(process.cwd(), 'venv', 'bin', 'python');
+    let command = `"${venvPython}" "${scriptPath}" --output "${outputPath}"`;
 
     if (url) {
       command += ` --url "${url}"`;
