@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../atoms/Button';
 import Text from '../atoms/Text';
 
-export default function HomePageHero() {
+export default function HomePage() {
   return (
     <div className='h-full flex items-center justify-center'>
       <div className='text-center max-w-4xl mx-auto px-6'>

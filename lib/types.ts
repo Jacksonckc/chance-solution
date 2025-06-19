@@ -16,4 +16,5 @@ export interface VideoDownloadResponse {
   filePath: string;
   downloadUrl: string;
   fileName: string;
+  fileSizeFormatted: string;
 }
