@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables for Theme System */
+:root {
+  /* Light Pink Theme */
+  --color-primary-pink: #ec4899;
+  --color-primary-light-pink: #f472b6;
+  --color-primary-dark-pink: #be185d;
+  --color-secondary-pink: #fdf2f8;
+  --color-accent-pink: #fce7f3;
+  --color-surface-pink: #fdf2f8;
+
+  /* Light Blue Theme */
+  --color-primary-blue: #3b82f6;
+  --color-primary-light-blue: #60a5fa;
+  --color-primary-dark-blue: #1d4ed8;
+  --color-secondary-blue: #eff6ff;
+  --color-accent-blue: #dbeafe;
+  --color-surface-blue: #eff6ff;
+
+  /* Neutral Theme */
+  --color-primary-neutral: #6b7280;
+  --color-primary-light-neutral: #9ca3af;
+  --color-primary-dark-neutral: #374151;
+  --color-secondary-neutral: #f9fafb;
+  --color-accent-neutral: #f3f4f6;
+  --color-surface-neutral: #f9fafb;
+
+  /* Dark Mode Colors */
+  --color-background-dark: #111827;
+  --color-surface-dark: #1f2937;
+  --color-text-dark: #f9fafb;
+  --color-text-light-dark: #d1d5db;
+  --color-border-dark: #374151;
+
+  /* Default Theme (Light Pink) */
+  --color-primary: var(--color-primary-pink);
+  --color-primary-light: var(--color-primary-light-pink);
+  --color-primary-dark: var(--color-primary-dark-pink);
+  --color-secondary: var(--color-secondary-pink);
+  --color-accent: var(--color-accent-pink);
+  --color-background: #ffffff;
+  --color-surface: var(--color-surface-pink);
+  --color-text: #1f2937;
+  --color-text-light: #6b7280;
+  --color-border: #e5e7eb;
+}
+
+/* Pink Theme */
+[data-theme='pink'] {
+  --color-primary: var(--color-primary-pink);
+  --color-primary-light: var(--color-primary-light-pink);
+  --color-primary-dark: var(--color-primary-dark-pink);
+  --color-secondary: var(--color-secondary-pink);
+  --color-accent: var(--color-accent-pink);
+  --color-surface: var(--color-surface-pink);
+}
+
+/* Blue Theme */
+[data-theme='blue'] {
+  --color-primary: var(--color-primary-blue);
+  --color-primary-light: var(--color-primary-light-blue);
+  --color-primary-dark: var(--color-primary-dark-blue);
+  --color-secondary: var(--color-secondary-blue);
+  --color-accent: var(--color-accent-blue);
+  --color-surface: var(--color-surface-blue);
+}
+
+/* Neutral Theme */
+[data-theme='neutral'] {
+  --color-primary: var(--color-primary-neutral);
+  --color-primary-light: var(--color-primary-light-neutral);
+  --color-primary-dark: var(--color-primary-dark-neutral);
+  --color-secondary: var(--color-secondary-neutral);
+  --color-accent: var(--color-accent-neutral);
+  --color-surface: var(--color-surface-neutral);
+}
+
+/* Dark Mode - Applied to all themes */
+.dark {
+  --color-background: var(--color-background-dark);
+  --color-surface: var(--color-surface-dark);
+  --color-text: var(--color-text-dark);
+  --color-text-light: var(--color-text-light-dark);
+  --color-border: var(--color-border-dark);
+}
+
+/* Custom Component Classes */
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 transition-all duration-200;
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200 hover:shadow-md active:scale-95;
+    background-color: var(--color-primary);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-primary-dark);
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200 hover:shadow-md active:scale-95;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-accent);
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 rounded-md border transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-opacity-50;
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+    color: var(--color-text);
+  }
+
+  .input-field:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-light);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+}
+
+/* Custom Animations */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

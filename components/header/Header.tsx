@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Nav from './Nav';
-import Button from '../common/Button';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,12 +36,20 @@ export default function Header() {
   }, [isOpen]);
 
   return (
-    <header className='relative flex items-center justify-between p-4 bg-gray-800 text-white h-[80px]'>
+    <header
+      className='relative flex items-center justify-between p-4 h-[80px] transition-colors duration-200 shadow-soft'
+      style={{
+        backgroundColor: 'var(--color-surface)',
+        color: 'var(--color-text)',
+        borderBottom: '1px solid var(--color-border)'
+      }}>
       <Nav isOpen={isOpen} toggleMenu={toggleMenu} />
-      <div className='text-xl font-bold'>Chan&apos;ce Solution</div>
-      <Button className='ml-4 p-2 bg-blue-500 hover:bg-blue-700 rounded' onClick={() => {}}>
-        Action
-      </Button>
+
+      <div
+        className='absolute left-1/2 transform -translate-x-1/2 text-xl font-bold font-display'
+        style={{ color: 'var(--color-text)' }}>
+        Chan&apos;ce Solution
+      </div>
     </header>
   );
 }

@@ -1,31 +1,69 @@
 import React from 'react';
+import Button from './common/Button';
 
 export default function HomePageHero() {
   return (
-    <>
-      <video
-        autoPlay
-        muted={false}
-        controls={false}
-        className='absolute top-0 left-0 w-full h-full z-[-1] transition-opacity duration-500 ease-in-out bg-white'
-        onClick={(e) => {
-          const video = e.target as HTMLVideoElement;
-          if (video.paused) {
-            video.play();
-          } else {
-            video.pause();
-          }
-        }}
-        onEnded={(e) => {
-          const video = e.target as HTMLVideoElement;
-          video.style.opacity = '0';
-          setTimeout(() => {
-            video.style.display = 'none';
-          }, 500);
-        }}>
-        <source src='/IMG_5611.mp4' type='video/mp4' />
-        Your browser does not support the video tag.
-      </video>
-    </>
+    <div className='min-h-screen flex items-center justify-center'>
+      <div className='text-center max-w-4xl mx-auto px-6'>
+        <h1
+          className='text-5xl md:text-7xl font-bold mb-6 font-display leading-tight'
+          style={{ color: 'var(--color-text)' }}>
+          Welcome to <span style={{ color: 'var(--color-primary)' }}>Chan&apos;ce Solution</span>
+        </h1>
+
+        <p
+          className='text-xl md:text-2xl mb-8 leading-relaxed'
+          style={{ color: 'var(--color-text-light)' }}>
+          Your comprehensive web solution for business needs. From video downloads to custom
+          applications, we&apos;ve got you covered.
+        </p>
+
+        <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+          <Button
+            className='btn-primary text-lg px-8 py-4'
+            onClick={() => (window.location.href = '/downloadVideo')}>
+            Try Video Downloader
+          </Button>
+
+          <Button
+            className='btn-secondary text-lg px-8 py-4'
+            onClick={() => (window.location.href = '/about')}>
+            Learn More
+          </Button>
+        </div>
+
+        <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'>
+          <div className='card p-6 text-center'>
+            <div className='text-4xl mb-4'>🎥</div>
+            <h3 className='text-xl font-semibold mb-2' style={{ color: 'var(--color-text)' }}>
+              Video Downloads
+            </h3>
+            <p className='text-sm' style={{ color: 'var(--color-text-light)' }}>
+              Download YouTube videos with ease. Support for specific URLs and trending videos.
+            </p>
+          </div>
+
+          <div className='card p-6 text-center'>
+            <div className='text-4xl mb-4'>⚡</div>
+            <h3 className='text-xl font-semibold mb-2' style={{ color: 'var(--color-text)' }}>
+              Fast & Reliable
+            </h3>
+            <p className='text-sm' style={{ color: 'var(--color-text-light)' }}>
+              High-quality downloads with customizable duration and format options.
+            </p>
+          </div>
+
+          <div className='card p-6 text-center'>
+            <div className='text-4xl mb-4'>🎨</div>
+            <h3 className='text-xl font-semibold mb-2' style={{ color: 'var(--color-text)' }}>
+              Beautiful UI
+            </h3>
+            <p className='text-sm' style={{ color: 'var(--color-text-light)' }}>
+              Modern interface with multiple themes and dark mode support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

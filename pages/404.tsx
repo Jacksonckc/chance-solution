@@ -1,23 +1,36 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import Button from '@/components/common/Button';
 
 const Custom404 = () => {
   const router = useRouter();
 
   return (
-    <div className='flex flex-col items-center justify-center h-[calc(100vh-80px)] text-center pb-[40px]'>
-      <h1 className='text-6xl mb-4'>404 - Page Not Found</h1>
-      <p className='text-2xl mb-8'>Sorry, the page you are looking for does not exist.</p>
-      <button
-        className='px-4 py-2 text-lg bg-blue-500 text-white rounded mb-4'
-        onClick={() => router.back()}>
-        Go Back
-      </button>
+    <div className='flex flex-col items-center justify-center min-h-[calc(100vh-80px)] text-center px-6'>
+      <div className='card p-8 max-w-md'>
+        <h1 className='text-6xl mb-4 font-display' style={{ color: 'var(--color-text)' }}>
+          404
+        </h1>
+        <h2 className='text-2xl mb-2 font-semibold' style={{ color: 'var(--color-text)' }}>
+          Page Not Found
+        </h2>
+        <p className='text-lg mb-8' style={{ color: 'var(--color-text-light)' }}>
+          Sorry, the page you are looking for does not exist.
+        </p>
 
-      <Link href='/' className='text-lg text-blue-500 underline'>
-        Go to Home
-      </Link>
+        <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+          <Button className='btn-primary' onClick={() => router.back()}>
+            Go Back
+          </Button>
+
+          <Link href='/'>
+            <Button className='btn-secondary' onClick={() => {}}>
+              Go to Home
+            </Button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
