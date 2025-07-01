@@ -32,12 +32,6 @@ export default function AboutCTA({ className = '' }: AboutCTAProps) {
               onClick={() => (window.location.href = '/contact')}>
               {t('common.startProject') as string}
             </Button>
-
-            <Button
-              className='btn-secondary text-lg px-8 py-4'
-              onClick={() => (window.location.href = '/downloadVideo')}>
-              {t('common.tryTools') as string}
-            </Button>
           </div>
 
           <div className='mt-8 pt-8 border-t' style={{ borderColor: 'var(--color-border)' }}>

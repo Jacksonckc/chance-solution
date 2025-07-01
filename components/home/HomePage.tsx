@@ -24,12 +24,6 @@ export default function HomePage() {
         </Text>
 
         <div className='flex flex-col sm:flex-row gap-4 justify-center mb-12'>
-          <Button
-            className='btn-primary text-lg px-8 py-4'
-            onClick={() => router.push('/downloadVideo')}>
-            {t('common.tryTools') as string}
-          </Button>
-
           <Button onClick={() => router.push('/about')} className='btn-primary text-lg px-8 py-4'>
             {t('home.cta') as string}
           </Button>
@@ -41,17 +35,7 @@ export default function HomePage() {
           </Button>
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-          <div className='card p-6 text-center'>
-            <div className='text-4xl mb-4'>🎥</div>
-            <Text variant='h3' as='h3' className='mb-2'>
-              {t('home.features.videoDownloads.title') as string}
-            </Text>
-            <Text variant='body2' style={{ color: 'var(--color-text-light)' }}>
-              {t('home.features.videoDownloads.description') as string}
-            </Text>
-          </div>
-
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
           <div className='card p-6 text-center'>
             <div className='text-4xl mb-4'>⚡</div>
             <Text variant='h3' as='h3' className='mb-2'>

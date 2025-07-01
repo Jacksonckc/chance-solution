@@ -4,7 +4,6 @@
     "about": "关于",
     "jobs": "工作",
     "contact": "联系",
-    "downloadVideo": "下载视频",
     "settings": "设置",
     "theme": "主题",
     "language": "语言"
@@ -16,13 +15,9 @@
     "cta": "开始使用",
     "learnMore": "了解更多",
     "features": {
-      "videoDownloads": {
-        "title": "视频下载",
-        "description": "轻松下载 YouTube 视频。支持特定 URL 和热门视频。"
-      },
       "fastReliable": {
         "title": "快速可靠",
-        "description": "高质量下载，支持自定义时长和格式选项。"
+        "description": "高性能应用程序，采用优化代码和高效数据处理。"
       },
       "beautifulUI": {
         "title": "美观界面",
@@ -119,39 +114,6 @@
     "noJobs": "目前没有职位空缺",
     "checkBack": "请稍后再查看新的机会"
   },
-  "videoDownload": {
-    "title": "YouTube 视频下载器",
-    "urlLabel": "YouTube URL（\"下载视频\"需要，\"下载热门\"可选）",
-    "urlPlaceholder": "https://www.youtube.com/watch?v=...",
-    "durationLabel": "时长（秒）- 留空下载完整视频",
-    "durationPlaceholder": "300",
-    "entireVideo": "将下载完整视频",
-    "partialVideo": "将下载前 {duration} 秒（{minutes} 分钟）",
-    "downloadVideo": "下载视频",
-    "downloadTrending": "下载热门",
-    "downloading": "下载中...",
-    "download": "下载",
-    "validation": {
-      "noUrl": "请输入 YouTube URL 来下载特定视频。",
-      "invalidUrl": "请输入有效的 YouTube URL（例如：https://www.youtube.com/watch?v=...）",
-      "invalidDuration": "时长必须是正数。"
-    },
-    "history": {
-      "title": "下载历史",
-      "clearHistory": "清除历史",
-      "cleanupFiles": "清理文件",
-      "cleaning": "清理中..."
-    },
-    "instructions": {
-      "title": "使用方法：",
-      "downloadVideo": "下载视频：需要 YouTube URL 来下载特定视频",
-      "downloadTrending": "下载热门：下载当天最受欢迎的热门视频（无需 URL）",
-      "duration": "时长：留空下载完整视频，或指定秒数下载片段",
-      "format": "视频以 MP4 格式保存，最高质量可达 1080p",
-      "download": "点击下载按钮将视频保存到您的设备",
-      "cleanup": "使用\"清理文件\"从服务器删除旧的视频文件"
-    }
-  },
   "contact": {
     "title": "联系我们",
     "description": "准备用强大的网络解决方案改造您的业务吗？让我们讨论 Chan'ce Solution 如何帮助您成功。",
@@ -208,7 +170,6 @@
     "error": "错误",
     "success": "成功",
     "warning": "警告",
-    "tryTools": "试用我们的工具",
     "getInTouch": "联系我们",
     "learnMore": "了解更多"
   }

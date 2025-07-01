@@ -10,7 +10,6 @@ A modern, responsive web application showcasing Chan'ce Solution's web developme
 - **Theme Support**: Dark/Light mode with smooth transitions
 - **Internationalization**: Multi-language support (English, Spanish, Chinese)
 - **Contact System**: Integrated contact form with email functionality
-- **Video Download Tool**: YouTube video downloader with trending video support
 - **Job Listings**: Dynamic job openings display
 - **Professional Portfolio**: Showcase of services and company information
 
@@ -51,8 +50,7 @@ chance-solution/
 │   ├── organisms/             # Complex components (HomePageHero)
 │   ├── contact/               # Contact page components
 │   ├── jobs/                  # Jobs page components
-│   ├── header/                # Navigation components
-│   └── videoDownload/         # Video downloader components
+│   └── header/                # Navigation components
 ├── pages/                     # Next.js pages
 ├── lib/                       # Utility functions and types
 ├── hooks/                     # Custom React hooks
@@ -99,7 +97,6 @@ chance-solution/
 - **About** (`/about`) - Company information and services
 - **Jobs** (`/jobs`) - Current job openings
 - **Contact** (`/contact`) - Contact form and company details
-- **Download Video** (`/downloadVideo`) - YouTube video downloader tool
 
 ## 🎨 Component Architecture
 
@@ -115,7 +112,6 @@ This project follows **Atomic Design** principles:
 
 - **ContactForm**: Modular form with validation and API integration
 - **ThemeToggle**: Dark/Light mode switcher
-- **VideoDownloader**: YouTube video download functionality
 - **JobCard**: Reusable job listing component
 - **ContactMethodCard**: Contact method display cards
 
@@ -141,7 +137,6 @@ yarn type-check   # Run TypeScript type checking
 ## 🌐 API Routes
 
 - `/api/contact` - Contact form submission
-- `/api/cleanup-videos` - Video cleanup functionality
 
 ## 🎯 Key Features
 
@@ -151,13 +146,6 @@ yarn type-check   # Run TypeScript type checking
 - LinkedIn company page integration
 - Contact form with validation
 - Success/error message handling
-
-### Video Downloader
-
-- YouTube URL validation
-- Duration-based video trimming
-- Trending video downloads
-- File cleanup functionality
 
 ### Theme System
 

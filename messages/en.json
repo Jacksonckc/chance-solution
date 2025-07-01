@@ -4,7 +4,6 @@
     "about": "About",
     "jobs": "Jobs",
     "contact": "Contact",
-    "downloadVideo": "Download Video",
     "settings": "Settings",
     "theme": "Theme",
     "language": "Language"
@@ -22,7 +21,6 @@
     "learnMore": "Learn More",
     "getInTouch": "Get in Touch",
     "startProject": "Start Your Project",
-    "tryTools": "Try Our Tools",
     "close": "Close",
     "warning": "Warning"
   },
@@ -33,13 +31,9 @@
     "cta": "Get Started",
     "learnMore": "Learn More",
     "features": {
-      "videoDownloads": {
-        "title": "Video Downloads",
-        "description": "Download YouTube videos with ease. Support for specific URLs and trending videos."
-      },
       "fastReliable": {
         "title": "Fast & Reliable",
-        "description": "High-quality downloads with customizable duration and format options."
+        "description": "High-performance applications with optimized code and efficient data handling."
       },
       "beautifulUI": {
         "title": "Beautiful UI",
@@ -194,39 +188,6 @@
         "title": "Support",
         "description": "Ongoing maintenance and updates"
       }
-    }
-  },
-  "videoDownload": {
-    "title": "YouTube Video Downloader",
-    "urlLabel": "YouTube URL (Required for \"Download Video\", optional for \"Download Trending\")",
-    "urlPlaceholder": "https://www.youtube.com/watch?v=...",
-    "durationLabel": "Duration (seconds) - Leave empty for entire video",
-    "durationPlaceholder": "300",
-    "entireVideo": "Will download the entire video",
-    "partialVideo": "Will download first {duration} seconds ({minutes} minutes)",
-    "downloadVideo": "Download Video",
-    "downloadTrending": "Download Trending",
-    "downloading": "Downloading...",
-    "download": "Download",
-    "validation": {
-      "noUrl": "Please enter a YouTube URL to download a specific video.",
-      "invalidUrl": "Please enter a valid YouTube URL (e.g., https://www.youtube.com/watch?v=...)",
-      "invalidDuration": "Duration must be a positive number."
-    },
-    "history": {
-      "title": "Download History",
-      "clearHistory": "Clear History",
-      "cleanupFiles": "Cleanup Files",
-      "cleaning": "Cleaning..."
-    },
-    "instructions": {
-      "title": "How it works:",
-      "downloadVideo": "Download Video: Requires a YouTube URL to download a specific video",
-      "downloadTrending": "Download Trending: Downloads the most viewed trending video of the day (no URL needed)",
-      "duration": "Duration: Leave empty to download entire video, or specify seconds for a segment",
-      "format": "Videos are saved in MP4 format with best quality up to 1080p",
-      "download": "Click the download button to save the video to your device",
-      "cleanup": "Use \"Cleanup Files\" to remove old video files from the server"
     }
   },
   "footer": {
