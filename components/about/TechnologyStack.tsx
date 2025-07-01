@@ -17,19 +17,27 @@ export default function TechnologyStack({ className = '' }: TechnologyStackProps
   const techStack: TechCategory[] = [
     {
       category: t('about.techStack.frontend') as string,
-      technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML5', 'CSS3']
+      technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS']
     },
     {
       category: t('about.techStack.backend') as string,
-      technologies: ['Node.js', 'Express', 'Python', 'PostgreSQL', 'MongoDB', 'REST APIs']
+      technologies: [
+        'Node.js',
+        'Express',
+        'PostgreSQL',
+        'REST APIs',
+        'GraphQL',
+        'Apollo Client',
+        'Supabase'
+      ]
     },
     {
       category: t('about.techStack.tools') as string,
-      technologies: ['Git', 'Docker', 'AWS', 'Vercel', 'Figma', 'VS Code']
+      technologies: ['Git', 'AWS', 'Vercel', 'Figma']
     },
     {
       category: t('about.techStack.performance') as string,
-      technologies: ['Webpack', 'Babel', 'Lighthouse', 'Core Web Vitals', 'CDN', 'Caching']
+      technologies: ['Lighthouse', 'Core Web Vitals', 'Caching', 'SEO']
     }
   ];
 
