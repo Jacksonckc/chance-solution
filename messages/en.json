@@ -6,7 +6,8 @@
     "contact": "Contact",
     "settings": "Settings",
     "theme": "Theme",
-    "language": "Language"
+    "language": "Language",
+    "team": "Team"
   },
   "common": {
     "loading": "Loading...",

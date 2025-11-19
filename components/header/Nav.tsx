@@ -28,6 +28,7 @@ export default function Nav({ isOpen, toggleMenu }: NavProps) {
   const menuItems = [
     { label: t('navigation.home') as string, path: '/' },
     { label: t('navigation.about') as string, path: '/about' },
+    { label: t('navigation.team') as string, path: '/team' },
     { label: t('navigation.jobs') as string, path: '/jobs' },
     { label: t('navigation.contact') as string, path: '/contact' }
   ];
