@@ -146,6 +146,9 @@
     "noJobs": "No job openings at the moment",
     "checkBack": "Please check back later for new opportunities"
   },
+  "team": {
+    "title": "Title"
+  },
   "contact": {
     "title": "Get in Touch",
     "description": "Ready to transform your business with powerful web solutions? Let's discuss how Chan'ce Solution can help you succeed.",

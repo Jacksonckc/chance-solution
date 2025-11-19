@@ -22,7 +22,7 @@ export default function TeamCard({ member, description }: TeamProps) {
             </Text>
             <div className='space-y-2 mb-4'>
                 <Text variant='body2' style={{ color: 'var(--color-text-light)' }}>
-                    <span className='font-medium'>{t('')}:</span> {member.Title}
+                    <span className='font-medium'>{t('team.title')}:</span> {member.Title}
                 </Text>
             </div>
         </div>
