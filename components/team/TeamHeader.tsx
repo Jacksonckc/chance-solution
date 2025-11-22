@@ -12,8 +12,10 @@ export default function TeamHeader({ name }: TeamHeaderProps) {
     const t = useTranslations();
 
     return (
-        <div>
-            The Team
+        <div className={`text-center mb-8`}>
+            <Text variant='h1' as='h1' className='mb-4'>
+                {t("team.header")}
+            </Text>
         </div>
-    )
+            )
 }

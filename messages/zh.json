@@ -130,7 +130,8 @@
     "checkBack": "请稍后再查看新的机会"
   },
   "team": {
-    "title": "标题"
+    "title": "标题",
+    "header": "团队"
   },
   "contact": {
     "title": "联系我们",

@@ -147,7 +147,8 @@
     "checkBack": "Please check back later for new opportunities"
   },
   "team": {
-    "title": "Title"
+    "title": "Title",
+    "header": "The Team"
   },
   "contact": {
     "title": "Get in Touch",
