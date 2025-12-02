@@ -1,6 +1,5 @@
 import React from "react";
 import TeamHeader from "./TeamHeader";
-import { useTranslations } from "@/hooks/useTranslations";
 import TeamCard from "./TeamCard";
 
 
@@ -8,16 +7,14 @@ interface Team {
     name: string;
     title: string;
     bio: string;
-    image: string;
+    image?: string;
 }
 
 interface TeamMembers {
     members: Team[]
 }
 
-export default function TeamPage({
-    members
-}: TeamMembers) {
+export default function TeamPage({members}: TeamMembers) {
 
     return (
         <div
