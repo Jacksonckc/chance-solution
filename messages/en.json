@@ -148,7 +148,8 @@
   },
   "team": {
     "title": "Title",
-    "header": "The Team"
+    "header": "The Team",
+    "bio": "Bio"
   },
   "contact": {
     "title": "Get in Touch",

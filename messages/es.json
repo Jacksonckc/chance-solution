@@ -147,8 +147,9 @@
   },
   "team": {
     "title": "Título",
-    "header": "El Equipo"
-  },
+    "header": "El Equipo",
+    "bio": "Biografía"
+},
   "contact": {
     "title": "Ponte en Contacto",
     "description": "¿Listo para transformar tu negocio con poderosas soluciones web? Hablemos sobre cómo Chan'ce Solution puede ayudarte a tener éxito.",

@@ -130,9 +130,10 @@
     "checkBack": "请稍后再查看新的机会"
   },
   "team": {
-    "title": "标题",
-    "header": "团队"
-  },
+    "title": "头衔",
+    "header": "团队",
+    "bio": "简介"
+},
   "contact": {
     "title": "联系我们",
     "description": "准备用强大的网络解决方案改造您的业务吗？让我们讨论 Chan'ce Solution 如何帮助您成功。",

@@ -6,8 +6,10 @@ import TeamCard from "./TeamCard";
 
 
 interface Team {
-    Name: string,
-    Title: string
+    name: string;
+    title: string;
+    bio: string;
+    image: string;
 }
 
 interface TeamMembers {
@@ -20,17 +22,21 @@ export default function TeamPage({
     const t = useTranslations();
 
     return (
-        <div>
-            <TeamHeader name="TEAM" />
-            <div>
-                {members.length > 0 ? (
-                    members.map((member, index) => <TeamCard key={index} member={member} />)
-                ) : (
-                    <div className='card p-8 text-center'>
-                        No members
-                    </div>
-                )}
+        <div
+            className={`p-6 transition-colors duration-200`}
+            style={{ backgroundColor: 'var(--color-background)' }}>
+            <div className='max-w-4xl mx-auto'>
+                <TeamHeader name="TEAM" />
+                <div className='space-y-6'>
+                    {members.length > 0 ? (
+                        members.map((member, index) => <TeamCard key={index} member={member} description={member?.bio} />)
+                    ) : (
+                        <div className='card p-8 text-center'>
+                            No members
+                        </div>
+                    )}
+                </div>
             </div>
-        </div>
+        </div >
     )
 }
