@@ -6,7 +6,8 @@
     "contact": "Contact",
     "settings": "Settings",
     "theme": "Theme",
-    "language": "Language"
+    "language": "Language",
+    "team": "Team"
   },
   "common": {
     "loading": "Loading...",
@@ -144,6 +145,11 @@
     "applyNow": "Apply Now",
     "noJobs": "No job openings at the moment",
     "checkBack": "Please check back later for new opportunities"
+  },
+  "team": {
+    "title": "Title",
+    "header": "The Team",
+    "bio": "Bio"
   },
   "contact": {
     "title": "Get in Touch",
