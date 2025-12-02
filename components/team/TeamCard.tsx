@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React from 'react';
 import Text from '@/components/atoms/Text';
 import { useTranslations } from '@/hooks/useTranslations';
 import Team from '@/pages/team';

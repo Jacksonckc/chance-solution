@@ -3,12 +3,8 @@ import Text from '@/components/atoms/Text';
 import { useTranslations } from '@/hooks/useTranslations';
 
 
-interface TeamHeaderProps {
-    name: string
-}
 
-
-export default function TeamHeader({ name }: TeamHeaderProps) {
+export default function TeamHeader() {
     const t = useTranslations();
 
     return (
